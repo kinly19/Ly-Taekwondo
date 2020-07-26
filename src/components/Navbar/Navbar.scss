@@ -11,10 +11,6 @@
     font-family: 'Roboto', sans-serif;
    
     
-
-  
-    
-
     &__logo {
 
         display: flex;
@@ -28,8 +24,6 @@
         color:#efefef;
         white-space: nowrap;
         text-decoration: none;
-        
-        
 
     }
 
@@ -45,15 +39,12 @@
         clip-path: polygon(27% 0, 100% 0%, 100% 100%, 26% 100%);
         background-color: #CC0018;
         
-
     }
 
     &__links{
         &:link,
         &:visited{
-            
             text-decoration: none;
-            
         }
         
     
