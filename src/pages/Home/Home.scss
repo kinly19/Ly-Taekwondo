@@ -1,9 +1,52 @@
-h1 {
-    background-color: grey;
-    text-align: center;
-    margin-top: 50px;
+
+
+.layout__container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 100vh 40vh min-content repeat(3, min-content);
+    grid-column-gap: 0px; 
+    grid-row-gap: 0px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: white;
+
     
+
+    // background-color: rgba(252, 0, 0, 0.233);
 }
 
-// need to define the home page layout with grid(need a container for display:grid)
+.header {
+
+    grid-column: 1/11;
+    grid-row: 1/2;
+    // background-image: url("../../assets/img/img1.jpg");
+    background-image: linear-gradient(to right bottom, #cc00185e, #c208024d), url("https://images.unsplash.com/photo-1476525223214-c31ff100e1ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+    &__title {
+      
+       font-size: 3.5rem;
+       font-size: 5.2rem;
+       letter-spacing: 0.8rem;
+       font-weight: 500;
+       margin-bottom: .5rem;
+    }
+
+    &__subtitle { 
+
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+        font-weight: 100;
+        margin-bottom: 1.5rem;
+    }
+}
+
+
  
+   
