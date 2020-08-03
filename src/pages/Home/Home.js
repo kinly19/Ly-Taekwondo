@@ -3,7 +3,6 @@ import './Home.scss';
 import img2 from '../../assets/img/img2.jpg';
 import instagram from '../../assets/img/instagram.svg';
 import facebook from '../../assets/img/facebook.svg';
-// import youtube from '../../assets/img/youtube.svg';
 import youtube2 from '../../assets/img/youtube2.svg';
 
 
@@ -70,7 +69,7 @@ const Home = () => {
                 <h1>Section 4</h1>
             </div>
 
-        </div >
+        </div>
 
     )
 }
