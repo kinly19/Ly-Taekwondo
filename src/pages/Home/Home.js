@@ -1,6 +1,13 @@
 import React from 'react';
 import './Home.scss';
 import img2 from '../../assets/img/img2.jpg';
+import instagram from '../../assets/img/instagram.svg';
+import facebook from '../../assets/img/facebook.svg';
+// import youtube from '../../assets/img/youtube.svg';
+import youtube2 from '../../assets/img/youtube2.svg';
+
+
+
 
 const Home = () => {
     return (
@@ -21,7 +28,8 @@ const Home = () => {
                 </div>
 
                 <div className="section_welcome__right">
-                    <h1 className="section_welcome__header">Ly Taekwondo</h1>
+                    <h1 className="section_welcome__header section_welcome__header--1">Welcome To</h1>
+                    <h1 className="section_welcome__header section_welcome__header--2">Ly Taekwondo</h1>
                     <p className="section_welcome__paragraph section_welcome__paragraph--1">
                         360 Kick provides Taekwondo and mindfulness classes,
                         that helps busy professionals and business owners to
@@ -39,6 +47,16 @@ const Home = () => {
                         physical, mental and financial well-being.
                     </p>
 
+                    <h1 className="section_welcome__header section_welcome__header--3">Dont forget to catch us here</h1>
+
+                    <button className="section_welcome__btn2">Learn more</button>
+
+                    <div className="section_welcome__icon_items">
+                        <a href="https://www.instagram.com/ly_taekwondo"><img className="section_welcome__icons section_welcome__icons--instag_icon" src={instagram} alt="instagram icon" /></a>
+                        <a href="http://www.facebook.com"> <img className="section_welcome__icons section_welcome__icons--facebook_icon" src={facebook} alt="facebook icon" /></a>
+                        <a href="https://www.youtube.com/channel/UC4towYpMTj6oK0xVYpMVmvA?"> <img className="section_welcome__icons section_welcome__icons--youtube_icon" src={youtube2} alt="youtube icon"></img></a>
+                    </div>
+
 
                 </div>
 
@@ -52,7 +70,7 @@ const Home = () => {
                 <h1>Section 4</h1>
             </div>
 
-        </div>
+        </div >
 
     )
 }
