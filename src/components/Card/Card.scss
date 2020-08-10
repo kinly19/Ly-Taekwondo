@@ -1,0 +1,21 @@
+.card {
+    background-color: rebeccapurple;
+    width: 35rem;
+    height: 50rem;
+
+    img {
+        object-fit: cover;
+        width: 35rem;
+        height: 25rem;
+    }
+
+    &__heading {
+        text-align: center;
+        color: silver;
+    }
+
+    &__text{
+        text-align: center;
+        color: steelblue;
+    }
+}
