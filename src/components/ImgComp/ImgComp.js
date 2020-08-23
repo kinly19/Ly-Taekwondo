@@ -1,21 +1,24 @@
 import React from 'react';
 import './ImgComp.scss'
 
-function ImgComp({ Background, heading, subHeading, imgClass, src }) {
+function ImgComp({ BackgroundImg, headerClass, subheaderClass, className, header, subHeader }) {
 
-    let imgStyles = {
-        // backgroundImage: `url(${Background})`,
-        width: 100 + "%",
-        height: "auto"
+    // let imgStyles = {
+    //     width: 100 + "vw",
+    //     height: 100 + "vh",
+    //     objectFit: "cover",
+    // }
 
+    let background = {
+        backgroundImage: `linear-gradient(to right bottom, #cc00185e, #c208024d),url(${BackgroundImg})`
     }
 
     return (
-        <div className="slider__img">
-            <img className={imgClass} src={src} alt="slide-img" style={imgStyles}></img>
-            <h1 className="slider__heading">{heading}</h1>
-            <h3 className="slider__subHeading">{subHeading}</h3>
-        </div>
+        <div className={className} style={background} > {/**slide*/}
+            {/* <img className={imgClass} src={src} alt="slide-img" style={imgStyles}></img> */}
+            <h1 className={headerClass}>{header}</h1>
+            <h3 className={subheaderClass}>{subHeader}</h3>
+        </div >
 
     )
 }
