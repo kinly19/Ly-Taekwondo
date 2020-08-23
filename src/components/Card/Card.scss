@@ -1,21 +1,65 @@
 .card {
-    background-color: rebeccapurple;
-    width: 35rem;
-    height: 50rem;
 
-    img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15vw;
+    height: 50vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+
+    background-color:#f2f2f2;
+    // background: linear-gradient(180deg, rgba(213,5,29,1) 0%, rgba(204,0,24,1) 50%, rgba(125,0,15,1) 100%);
+    // background: linear-gradient(180deg, rgba(159,4,22,1) 0%, rgba(204,0,24,1) 100%);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+    border-radius: .7rem;
+    overflow: hidden;
+    
+    
+
+    &__background-img {
+
         object-fit: cover;
-        width: 35rem;
-        height: 25rem;
+        width: 15vw;
+        height: 25vh;
+
+       &--4 {
+           object-position: 0 -20px;
+       }
     }
 
     &__heading {
+        display: flex;
+        width: 100%;
+        height: 12%;
+        justify-content: center;
+        align-items: center;
+        // background-color: #2a2a2a;
+        background-color: #232323;
+        // background: radial-gradient(circle, rgba(45,45,45,1) 0%, rgba(19,19,19,1) 100%);
+        text-transform: uppercase;
         text-align: center;
-        color: silver;
+        font-size: 1.7rem;
+        font-weight: 500;
+        
+        color: #e1e1e1;
+        margin-bottom: 2rem;
     }
 
     &__text{
+        
         text-align: center;
-        color: steelblue;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem; 
+        color: rgb(53, 53, 53);
+        font-size: 1.2rem;
+    }
+
+    &__button{
+        margin-top: auto;
     }
 }
