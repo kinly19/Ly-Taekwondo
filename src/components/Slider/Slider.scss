@@ -1,4 +1,5 @@
 .slider-container {
+    
     border: 1px solid red;
     width: 100%;
     height: 100vh;
@@ -7,25 +8,43 @@
     padding: 0;
     display: flex;
     align-content: center;
-   
+    position: relative;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+    z-index: 1000;
 }
 
 .slider {
+
     border: 1px solid blue;
-    width: 100%;
-    min-width: 100%;
-    height: 80%;
+    min-width: 100vw;
+    height: 100vh;
     transition: .5s;
     color: red;
+    border: none;
+    color: white;
+    font-size: 2rem;
+ 
 
     &__img {
+        
+    //    object-position: 0 -350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+     
 
+    &--1{
+        //    background-position: 0 -330px;
+        background-position: bottom;
+    }
 
     }
 
     &__heading{
         color: orange;
-
     }
 
     &__subHeading {
@@ -33,24 +52,70 @@
     }
 
 } 
+.slider-button {
 
-#goLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
-    left: 0;
     transform: translateY(-50%);
+    height: 100vh;
     width: 10%;
-    height: 80vh;
-    background: none;
+    background:none;
+    border: none;
+    outline: none;
+    transition: all .5s .1s ease-in-out;
+
+    &__goLeft {
+
+        left: 0;
+    }
+
+    &__goRight {
+
+        right: 0;
+    }
+
+    &__icon {
+
+       height: 4.5rem;
+       width: 4.5rem;
+       fill: #CC0018;
+       opacity: .8;
+       cursor: pointer;
+       transition: all .25s;
+
+       &:hover{
+           opacity: 1;
+           height: 5rem;
+           width: 5rem;
+        
+       }
+    
+    }    
 
 }
 
-#goRight {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 10%;
-    height: 80vh;
-    background: none;
-}
+// #goLeft {
+//     position: absolute;
+//     top: 50%;
+//     left: 0;
+//     transform: translateY(-50%);
+//     width: 10%;
+//     height: 80vh;
+//     background: none;
+//     border: none;
+
+// }
+
+// #goRight {
+//     position: absolute;
+//     top: 50%;
+//     right: 0;
+//     transform: translateY(-50%);
+//     width: 10%;
+//     height: 80vh;
+//     background: none;
+//     border: none;
+// }
