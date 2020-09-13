@@ -11,24 +11,38 @@ function Slider() {
     let sliderArr = [
         <ImgComp
 
-            className="slider__img slider__img--1"
-            headerClass="landing__title"
-            subheaderClass="landing__subtitle"
             BackgroundImg={img3}
+            className="slider__img slider__img--1"
+            headerClass="landing__title landing__title--1" //maybe we can use a css variable for this.var(--header-main)
+            subheaderClass="landing__subtitle landing__subtitle--1 "
+
             header="Ly Taekwondo"
             subHeader="TimeLess Life Skills"
 
 
-        />,
+            buttonClass="btn btn--main"
+            buttonTitle="More"
+            buttonLink="https://www.youtube.com/watch?v=zYvZVMyv9Z8"
+
+        />
+
+        ,
 
         <ImgComp
 
-            className="slider__img slider__img--2"
-            headerClass="landing__title"
-            subheaderClass="landing__subtitle"
             BackgroundImg={img2}
-            header="What is Takwondo"
-            subHeader="TimeLess Life Skills"
+            className="slider__img slider__img--2"
+            headerClass="landing__title landing__title--2"
+            subheaderClass="landing__subtitle landing__subtitle--2"
+
+            header="What Is Taekwondo"
+            subHeader="The Way Of The Hand And Foot"
+
+            buttonClass=""
+            buttonTitle=""
+            buttonLink=""
+
+
         />
 
     ]
