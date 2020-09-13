@@ -1,0 +1,79 @@
+.testimony {
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+    background-color: orange;
+
+    &__title {
+        margin-bottom: 2rem;
+        color: red;
+    }
+
+    &__subtitle{
+        color: red;
+    }
+    
+    &__active {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__span {
+        height: 20px;
+        width: 20px;
+        margin: 0 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        
+
+        &::before { //show the before
+            content: "";
+            height:  6px;
+            width: 6px;
+            background-color: purple;
+            border-radius: 50%;
+            transition: background-color 0.3s ease-in;
+
+
+        }
+
+        &:hover:before {
+            background-color: red;
+        }
+
+        
+        &:active::before{
+            background-color: yellow;
+        }
+        
+      
+        
+    }
+
+    
+}
+
+
+// span {
+//     height: 20px;
+//     width: 20px;
+//     margin: 0 3px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     cursor: pointer;
+
+
+// }
+
+// span::before {
+//     content: "";
+//     height:  6px;
+//     width: 6px;
+//     background-color: purple;
+// }
