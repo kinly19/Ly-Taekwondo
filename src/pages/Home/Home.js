@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import './Home.scss';
-import Button from "../../components/Button"
-import Card from "../../components/Card"
-// import Testimony from '../../components/Testimony';
-import Slider from '../../components/Slider'
+// import Button from "../../components/Button";
+import Card from "../../components/Card";
+import Testimony from '../../components/Testimony';
+import Slider from '../../components/Slider';
+import InfoCard from '../../components/InfoCard';
 import '../../components/Button/Button.scss';
 import img2 from '../../assets/img/img2.jpg';
 import img4 from '../../assets/img/img4.jpg';
 import img5 from '../../assets/img/img5.jpg';
 import img6 from '../../assets/img/img6.jpg';
-import banner1 from '../../assets/img/banner1.jpg';
-import instagram from '../../assets/img/instagram.svg';
-import facebook from '../../assets/img/facebook.svg';
-import youtube2 from '../../assets/img/youtube2.svg';
+
+// import instagram from '../../assets/img/instagram.svg';
+// import facebook from '../../assets/img/facebook.svg';
+// import youtube2 from '../../assets/img/youtube2.svg';
 
 
 
@@ -25,27 +26,48 @@ class Home extends Component {
             <div className="main-container">
 
                 <div className="landing">
-                    {/* <div className="test">
-                        < Slider
-                            buttonstyle="hello"
-                        />
 
-                    </div> */}
-                    <h1 className="landing__title">Ly Taekwondo</h1>
-                    <h3 className="landing__subtitle">Timeless Life Skills</h3>
-                    <a href="https://www.youtube.com/watch?v=K41REhBIfAQ" className="btn btn--main">Discover</a>
-                    <Button //add some of that dynamic spice
-                        // className="btn btn--main"
-                        // title="Learn More"
-                        link="https://www.youtube.com/watch?v=BLTbuvv1Lgs"
-                    />
-
+                    <Slider />
 
                 </div>
 
                 <div className="section-welcome">
 
-                    <div className="section-welcome__left-container">
+                    <InfoCard
+
+                        className="left"
+                        backgroundImg={img2}
+                        imgClip="right" //clip path position 
+                        //contentClass-- will switch between testimonal and normal contents
+                        contentPosition="right"
+
+                        // clipPath="0 0, 100% 0%, 100% 100%, 20% 100%"
+                        // contentLeft="0"
+                        // contentRight=""
+                        // contentClipPath="0 0, 80% 0%, 100% 100%, 0% 100%"
+
+                        infoCardTitle="Welcome To"
+                        infoCardSubtitle="Ly Taekwondo"
+                        infoCardText="360 Kick provides Taekwondo and mindfulness classes,
+                        that helps busy professionals and business owners to
+                        release stress, and develop both physical and mental resilience,
+                        so that they can be more focused and efficient at work, also gives
+                        the mental toughness and agility to deal with day to day challenges
+                        with ease and power"
+                        infoCardText2="Blending martial arts and mindfulness helps
+                        individuals deepen the connections with their body
+                        and mind, so that cultivate a healthier relationship
+                        with themselves which plays an important part of ones
+                        physical, mental and financial well-being."
+
+
+
+                    />
+
+
+
+
+                    {/* <div className="section-welcome__left-container">
                         <img className="section-welcome__img" src={img2} alt="img2"></img>
                     </div>
 
@@ -84,17 +106,11 @@ class Home extends Component {
                             <a href="https://www.facebook.com"> <img className="section-welcome__icons section-welcome__icons--facebook_icon" src={facebook} alt="facebook icon" /></a>
                             <a href="https://www.youtube.com/channel/UC4towYpMTj6oK0xVYpMVmvA?"> <img className="section-welcome__icons section-welcome__icons--youtube_icon" src={youtube2} alt="youtube icon"></img></a>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="workshop-container">
-                    <div className="workshop"> {/** We need a container for our banner header */}
-                        <div className="workshop__picture">
-                            <img src={banner1} alt="img4" />
-                        </div>
-                        <h1 className="workshop__header">Trainning Programmes</h1>
-                    </div>
-
+                    <h1 className="workshop__header">Trainning Programmes</h1>
                     <div className="card-container"> {/*this will be the container to hold our card components, so we can place them via grid or flexbox*/}
 
                         < Card
@@ -136,12 +152,23 @@ class Home extends Component {
                 </div>
 
                 <div className="testimony-container">
-                    {/* < Testimony /> */}
-                    <Slider
+                    < Testimony />
 
-                    />
 
                 </div>
+
+                <InfoCard
+
+                    className="right"
+                    backgroundImg={img2}
+                    imgClip="left" //clip path position 
+                    //contentClass-- will switch between testimonal and normal contents
+                    contentPosition="left"
+
+
+
+
+                />
 
             </div >
 
