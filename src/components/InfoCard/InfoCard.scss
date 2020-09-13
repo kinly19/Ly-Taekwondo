@@ -1,0 +1,137 @@
+.infoCard {
+
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    color: red;
+
+    &--right {
+        flex-direction: row-reverse;
+    }
+
+    &__img{
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 55vw;
+        height: 80vh;
+
+        &--right {
+            clip-path: polygon(0px 0px, 80% 0%, 100% 100%, 0% 100%);
+        }
+
+        &--left {
+            clip-path: polygon(0px 0px, 100% 0%, 100% 100%, 20% 100%);
+        }
+    }
+
+    &__content {
+       
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(7, min-content);
+        column-gap: 3rem;
+        align-content: center;
+        font-size: 1.5rem;
+        position: absolute;
+        width: 57vw;
+        height: 80vh;
+
+        &--left {
+            left:0;
+            clip-path: polygon(0px 0px, 80% 0%, 100% 100%, 0% 100%);
+        }
+
+        &--right {
+            right:0;
+            clip-path: polygon(0px 0px, 100% 0%, 100% 100%, 20% 100%);
+        }
+    }
+    &__testimonial {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+    }
+
+    &__header{
+
+        color:#cc0018;
+        grid-column: 2/5;
+        justify-self: center;
+        letter-spacing: .3rem;
+        
+        &--1{
+           grid-row: 1;
+           font-size: 6.9rem; 
+        }
+        &--2{
+            grid-row: 2;
+            font-size: 1.9rem;
+            font-weight: 10;
+            letter-spacing: 0.5rem;
+            margin-bottom: 5rem;
+        }
+        &--3{
+            grid-row: 6;
+            margin-bottom: 3rem;
+            font-family: 'Dancing Script', cursive;
+            font-weight: 550;
+        }
+    }
+
+    &__paragraph {
+
+        grid-column: 2/5;
+        margin-bottom: 3rem;
+        font-size: 1.45rem;
+        text-align: center;
+        letter-spacing: 0.1rem;
+        color: #707070;
+        
+        &--1{
+            grid-row: 3/4;
+        }
+
+        &--2{
+            grid-row: 4/5;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__icon-container {
+
+        grid-row: 7;
+        grid-column: 2/5;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__icons {
+
+        height: 6.5rem;
+        opacity: 0.9;
+
+        &--youtube_icon {
+            border-radius: 1rem;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        
+    }
+
+    &__btn {
+        grid-column: 3;
+        grid-row: 5;
+        justify-self: center;
+        margin-bottom: 3rem;
+    }
+
+}
+
