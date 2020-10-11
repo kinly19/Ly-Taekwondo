@@ -5,14 +5,16 @@ import img1 from '../../assets/img/img1.jpg';
 import img2 from '../../assets/img/img2.jpg';
 import img3 from '../../assets/img/img3.jpg';
 import img4 from '../../assets/img/img4.jpg';
-// import img5 from '../../assets/img/img5.jpg';
-// import img6 from '../../assets/img/img6.jpg';
+import img5 from '../../assets/img/img5.jpg';
+import img6 from '../../assets/img/img6.jpg';
 import img7 from '../../assets/img/img7.jpg';
+import img8 from '../../assets/img/img8.jpg';
+import sprite from "../../assets/icons/sprite.svg";
 
 
 
 
-const Lightbox = (props, index) => {
+const Lightbox = (props) => {
 
     const photos = [
 
@@ -37,21 +39,15 @@ const Lightbox = (props, index) => {
         },
 
         {
-            src: img4
+            src: img8
         }
 
     ]
 
-    // const [currentImage, setCurrentImage] = useState(photos[0]);  
-    // const handleClick = (index) => {
-    //     setCurrentImage(photos[index]);
-    //     console.log("Clicked me"); 
-    //setCurrentImage(currentImage + 1)
 
-    // }
+    const [active, setActive] = useState(false); //active class 
 
-
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState([1]);
 
     const handleNextClick = () => {
 
@@ -65,14 +61,18 @@ const Lightbox = (props, index) => {
     const handlePrevClick = () => {
         setCount(count - 1)
         if (count === 0) {
-            setCount(5);
+            setCount(photos.length - 1);
         }
         console.log(count)
-
     }
 
-    const displayActive = { //use this to toggle our class on and off
-        display: "none"
+    const handleClassToggle = (index) => {
+        setCount(index);
+        setActive(true);
+    }
+
+    const handleClassToggleOff = () => {
+        setActive(false);
     }
 
 
@@ -80,36 +80,38 @@ const Lightbox = (props, index) => {
     return (
 
         <div className="lightbox">
+            <h1 className="lightbox__header">Gallery</h1>
 
-            {photos.map((item, index) => (
+            <div className="lightbox__image-container" >
+                {photos.map((item, index) => (
 
-                <img className={`lightbox__images lightbox__images--${index + 1}`} src={item.src} key={index}></img>
+                    <img className={`lightbox__images lightbox__images--${index + 1}`} src={item.src} key={index} onClick={() => handleClassToggle(index)}></img>
 
-                // {/* <div>
+                ))}
+            </div>
 
-                //     <img src={currentImage.src} height="100px" ></img>
-
-                //     <button height="100px" onClick={() => handleSetClick(index)}>change me</button>
-
-                // </div> */}
-
-            ))}
-
-            <div className="lightbox-active" style={displayActive} > {/* use a multiply condition  active ? "activeClass" : "non-activeClass"*/}
-                {/* <img src={photos[count].src} height="100px" ></img> */}
+            <div className="lightbox-active" style={active ? { display: 'flex' } : { display: 'none' }} > {/*maybe make a const style*/}
                 <div className="lightbox-active__image-container">
-                    <img className="lightbox-active__images" src={photos[count].src}></img> {/* using a count value on each click to change the photos array index position  */}
+                    <img className="lightbox-active__images" src={photos[count].src} onClick={() => handleClassToggleOff()}></img>
 
                 </div>
 
-                <button className="lightbox-active__button lightbox-active__button--next" height="100px" onClick={() => handleNextClick()}>next</button>
-                <button className="lightbox-active__button lightbox-active__button--prev" height="100px" onClick={() => handlePrevClick()}>prev</button>
+                <button className="lightbox-active__button lightbox-active__button--next" onClick={() => handleNextClick()}>
+                    <svg className="lightbox-active__icon">
+                        <use xlinkHref={sprite + "#icon-chevron-thin-right"}></use>
+
+                    </svg>
+                </button>
+
+                <button className="lightbox-active__button lightbox-active__button--prev" onClick={() => handlePrevClick()}>
+                    <svg className="lightbox-active__icon">
+                        <use xlinkHref={sprite + "#icon-chevron-thin-left"}></use>
+                    </svg>
+                </button>
 
             </div>
 
         </div >
-
-
     )
 }
 
