@@ -1,29 +1,58 @@
 
 
 .lightbox {
+    
     display: flex;
-    flex-flow: wrap;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     width: 70%;
-    background-color: yellowgreen;
+    // background-color: yellowgreen;
     position: relative;
+
+    &__image-container {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        width: 70vw;
+        margin-bottom: 7rem;
+
+    }
+
+    &__header {
+        color: #f7efef;
+       
+        font-weight: 700;
+        font-size: 4rem;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+        margin-bottom: 7rem;
+    }
+    
 
 
     &__images{
+        
+        object-fit: contain;
+        height: 28vh;
+        margin: 1.2rem;
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        transition: transform 0.2s;
+        border-radius: .3rem;
+        // border: .9rem solid #3e4556;
+        
+        &--5 {
+            width: 20.7vw;
+            object-fit: cover;
+        }
 
         &:hover{
             transform: scale(1.01);
         }
-        
-      
-        object-fit: contain;
-        height: 30vh;
-        margin: .5rem;
-        
-        &--5 {
-            width: 21.8vw;
-            object-fit: cover;
+
+        &:active {
+            transform: scale(1);
         }
     } 
 
@@ -32,51 +61,76 @@
 
 .lightbox-active {
         
- 
     background-color: rgba(0, 0, 0, 0.8);
     height: 100vh;
     width: 100vw;
     position: absolute;
-    display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 5s;
+   
 
     &__image-container {
         
-        height: 80vh;
-        width: 80vw;
-       
         order: 1;
-       
-    
     }
 
     &__images {
-        height: 80vh;
-        width: 80vw;
+
+        height: 70vh;
+        width: 70vw;
         object-fit: contain;
- 
+
     }
 
     &__button {
 
-        background-color: yellow;
-        color: white;
-        height: 5rem;
-        width: 5rem;
+        background-color: transparent;
+        width: 10rem;
+        height: 10rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &:active {
+            transform: scale(0.83);
+            opacity: 0.7;
+            transition: .1s;
+        }
 
 
         &--next {
             order: 2;
         
-         background-color: yellowgreen;
+        
         }
 
         &--prev {
-            background-color: red;
+           
            order: 0;
         }
 
+    }
+
+    &__icon {
+        height: 4.7rem;
+        width: 4.7rem;
+        // fill: #CC0018;
+        fill: whitesmoke;
+        
+        
+        opacity: .7;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+            height: 5rem;
+            width: 5rem;
+            opacity: 1;
+        }
+       
+
+ 
     }
     
 }
