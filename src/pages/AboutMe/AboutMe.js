@@ -11,13 +11,18 @@ class AboutMe extends Component {
 
                 <div className="bgImg-container"></div>
 
-                <div className="bg-container"></div>
+                <div className="container-center">
+                    <h1 className="">About Me</h1>
+                </div>
 
-                <div className="container-left"></div>
+                <div className="container-left">
+                    <img src={img10} alt="" />
+                </div>
                 <div className="mainContent-right">
 
                     <div className="aboutMe">
-                        <h1 className="aboutMe__header">About Me</h1>
+
+                        <h1 className="aboutMe__header">Julie Ly</h1>
 
                         <h2 className="aboutMe__subheader">Julie Ly Founder and owner of Ly Taekwondo 2019</h2>
 
@@ -38,7 +43,56 @@ class AboutMe extends Component {
                             out more.
                         </p>
 
+                    </div>
 
+                    <div className="skillSet">
+
+                        <h1 className="aboutMe__header aboutMe__header--secondary">Qualifications and Certificates</h1>
+
+                        <div className="skillSet__list-container">
+
+                            <ul className="skillSet__list">
+                                <li className="skillSet__subheader">3rd Dan Taekwondo black belt</li>
+
+                                <p className="skillSet__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </ul>
+
+                            <ul className="skillSet__list">
+                                <li className="skillSet__subheader">Registered And Insured Taekwondo Instructor  </li>
+                                <p className="skillSet__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </ul>
+
+                            <ul className="skillSet__list">
+                                <li className="skillSet__subheader">Level 2 Certificate In Coaching And Taekwondo </li>
+                                <p className="skillSet__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </ul>
+
+                            <ul className="skillSet__list">
+                                <li className="skillSet__subheader">Emergency First Aid At Work </li>
+                                <p className="skillSet__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </ul>
+
+                            <ul className="skillSet__list">
+                                <li className="skillSet__subheader">Safeguarding And Protecting Children</li>
+                                <p className="skillSet__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </ul>
+
+                            <ul className="skillSet__list">
+                                <li className="skillSet__subheader"> Enhanced DBS Check </li>
+                                <p className="skillSet__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </ul>
+
+                            <ul className="skillSet__list">
+                                <li className="skillSet__subheader">Covid Safe Martial Arts Certificate</li>
+                                <p className="skillSet__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </ul>
+
+                            <ul className="skillSet__list">
+                                <li className="skillSet__subheader">Safeguarding In Sport</li>
+                                <p className="skillSet__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </ul>
+
+                        </div>
 
 
                     </div>
