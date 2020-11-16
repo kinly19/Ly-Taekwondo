@@ -1,0 +1,104 @@
+
+.Taekwondo-gridContainer {
+    
+    display: grid;
+    grid-template-columns: 10vw repeat(8, 1fr) 10vw;
+    grid-template-rows: 70vh 10vh  min-content;
+
+    
+    background-image: url(../../assets/img/img7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color:#3A4256;
+    
+}
+
+.Taekwondo-centerContainer {
+    grid-column: 2 / 10;
+    grid-row: 2;
+    background-color: #ECECEC;
+    height: min-content;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+   
+}
+
+.taekwondo {
+
+    
+
+    &__header {
+        display: flex;
+        align-items: center;
+        height: 8rem;
+        padding-left: 20rem;
+        background-color:#343434;
+        color: #f1f1f1;
+        text-transform: uppercase;
+        // font-size: 3.7rem;
+        // font-weight: 300;
+        // letter-spacing: .15rem;
+        
+        
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: 0.45rem;
+    }
+
+    &__main-content {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10rem 20rem 10rem 20rem;
+
+        &--1 {
+            height: 40vh;
+        }
+
+        &--2{
+            height: fit-content;
+            justify-content: flex-start;
+    
+        }
+    }
+
+    &__subheader {
+
+       
+        font-size: 2.8rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        letter-spacing: 0.20rem;
+        
+
+    }
+
+    &__text {
+       font-size: 1.7rem;
+       font-weight: 300;
+
+       p {
+          margin-top: 4rem;
+          font-weight: 400;
+          letter-spacing: .05rem;
+          line-height: 2.7rem;
+       }
+    }
+
+    .kupRanks-container {
+        // background-color: yellowgreen;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      
+        
+      
+    }
+}
