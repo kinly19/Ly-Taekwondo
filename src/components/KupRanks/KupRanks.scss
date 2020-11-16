@@ -1,0 +1,89 @@
+
+.kup-rank {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    height: 30vh;
+    width: 12vw;
+    margin: 5rem 2rem 5rem 2rem;
+    border-radius: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: whitesmoke;
+
+        &--white {
+            background-color: whitesmoke;
+        }
+
+        &--yellow {
+            background-color: #F5FB51;
+        }
+
+        &--green {
+            background-color: #009700;
+            color: whitesmoke;
+            
+        }
+        
+        &--blue {
+            background-color: #125BB9;
+            color: whitesmoke;
+        }
+
+        &--red {
+            background-color: #BB2929;
+            color: whitesmoke;
+        }
+
+
+    &__header {
+        
+        font-size: 5.5rem;
+        font-weight: 600;
+    }
+
+    &__subheader {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+
+    &__strip {
+        margin-top: 6rem;
+        height: 3.5vh;
+        
+        width: 100%;
+
+            &--none {
+            opacity: 0;
+            }
+
+            &--white {
+                background-color: white; 
+            
+            }
+
+            &--yellow {
+                background-color: #F5FB51;
+            }
+
+            &--green {
+                background-color: #009700;
+            } 
+
+            &--blue {
+                background-color: #125BB9;
+            } 
+
+            &--red {
+                background-color: #BB2929;
+            }
+
+            &--black {
+                background-color: #373535;
+            }
+
+       
+    }
+}
