@@ -11,70 +11,90 @@ const KupRanks = (props) => {
         {
             kupRank: "10TH",
             beltColor: "white",
-            beltStrip: "none"
+            beltStripe: "none",
+            title: "The White Belt",
+            details: "White signifies the innocence of the beginner and his ignorance of Taekwondo."
 
         },
 
         {
             kupRank: "9TH",
             beltColor: "white",
-            beltStrip: "yellow"
+            beltStripe: "yellow",
+            title: "The White/Yellow Stripe",
+            details: "Each stripe on the end of the belt represents an intermediate step towards the next rank."
 
         },
 
         {
             kupRank: "8TH",
             beltColor: "yellow",
-            beltStrip: "none"
+            beltStripe: "none",
+            title: "The Yellow Belt",
+            details: "Yellow represents the earth, from where a plant takes root and sprouts as the foundations of Taekwondo are laid."
 
         },
 
         {
             kupRank: "7TH",
             beltColor: "yellow",
-            beltStrip: "green"
+            beltStripe: "green",
+            title: "The Yellow/Green Stripe",
+            details: "Each stripe on the end of the belt represents an intermediate step towards the next rank."
 
         },
 
         {
             kupRank: "6TH",
             beltColor: "green",
-            beltStrip: "none"
+            beltStripe: "none",
+            title: "The Green Belt",
+            details: "Green signifies the plant itself as, like a plant, the student's Taekwondo skills continue to grow."
 
         },
 
         {
             kupRank: "5TH",
             beltColor: "green",
-            beltStrip: "blue"
+            beltStripe: "blue",
+            title: "The Green/Blue Stripe",
+            details: "Each stripe on the end of the belt represents an intermediate step towards the next rank."
 
         },
 
         {
             kupRank: "4TH",
             beltColor: "blue",
-            beltStrip: "none"
+            beltStripe: "none",
+            title: "The Blue Belt",
+            details: "Blue represents the heavens above, the divine direction in which the plant is growing."
 
         },
 
         {
             kupRank: "3RD",
             beltColor: "blue",
-            beltStrip: "red"
+            beltStripe: "red",
+            title: "The Blue/Red Stripe",
+            details: "Each stripe on the end of the belt represents an intermediate step towards the next rank."
 
         },
 
         {
             kupRank: "2ND",
             beltColor: "red",
-            beltStrip: "none"
+            beltStripe: "none",
+            title: "The Red Belt",
+            details: "Red signifies danger, warning the student of his own capability for damage and other students of his skill."
 
         },
 
         {
             kupRank: "1ST",
             beltColor: "red",
-            beltStrip: "black"
+            beltStripe: "black",
+            title: "The Red/Black Stripe",
+            details: "Each stripe on the end of the belt represents an intermediate step towards the next rank."
 
         },
 
@@ -85,8 +105,17 @@ const KupRanks = (props) => {
         Ranks.map((item, index) => (
             <div className={`kup-rank kup-rank--${item.beltColor}`}>
                 <h1 className="kup-rank__header"> {item.kupRank}</h1>
-                <h2 className="kup-rank__subheader">KUP</h2>
-                <div className={`kup-rank__strip kup-rank__strip--${item.beltStrip}`}></div>
+                <h2 className="kup-rank__subheader">Kup</h2>
+                <div className={`kup-rank__strip kup-rank__strip--${item.beltStripe}`}></div>
+
+                <div className="kup-rank__back">
+                    <div className="back-content">
+                        <h1 className="back-content__header">AKA</h1>
+                        <h2 className="back-content__subheader">{item.title}</h2>
+                        <p className="back-content__text">{item.details}</p>
+                    </div>
+
+                </div>
             </div>
         ))
 
