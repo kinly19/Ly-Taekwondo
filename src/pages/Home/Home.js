@@ -1,19 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, Route } from 'react';
 import './Home.scss';
-// import Button from "../../components/Button";
 import Card from "../../components/Card";
 import Testimony from '../../components/Testimony';
 import Slider from '../../components/Slider';
 import InfoCard from '../../components/InfoCard';
+import Lightbox from '../../components/Lightbox';
 import '../../components/Button/Button.scss';
 import img2 from '../../assets/img/img2.jpg';
 import img4 from '../../assets/img/img4.jpg';
 import img5 from '../../assets/img/img5.jpg';
 import img6 from '../../assets/img/img6.jpg';
+import img7 from '../../assets/img/img7.jpg';
 
-// import instagram from '../../assets/img/instagram.svg';
-// import facebook from '../../assets/img/facebook.svg';
-// import youtube2 from '../../assets/img/youtube2.svg';
 
 
 
@@ -26,26 +24,17 @@ class Home extends Component {
             <div className="main-container">
 
                 <div className="landing">
-
                     <Slider />
-
                 </div>
 
                 <div className="section-welcome">
 
                     <InfoCard
 
-                        className="left"
+                        className="right"
                         backgroundImg={img2}
-                        imgClip="right" //clip path position 
-                        //contentClass-- will switch between testimonal and normal contents
-                        contentPosition="right"
-
-                        // clipPath="0 0, 100% 0%, 100% 100%, 20% 100%"
-                        // contentLeft="0"
-                        // contentRight=""
-                        // contentClipPath="0 0, 80% 0%, 100% 100%, 0% 100%"
-
+                        imgClip="left" //clip path position 
+                        contentPosition="left"
                         infoCardTitle="Welcome To"
                         infoCardSubtitle="Ly Taekwondo"
                         infoCardText="360 Kick provides Taekwondo and mindfulness classes,
@@ -59,59 +48,16 @@ class Home extends Component {
                         and mind, so that cultivate a healthier relationship
                         with themselves which plays an important part of ones
                         physical, mental and financial well-being."
-
-
-
+                        btnClassName="btn btn--secondary"
+                        btnLink="/AboutMe"
+                        btnTitle="Read More"
                     />
 
-
-
-
-                    {/* <div className="section-welcome__left-container">
-                        <img className="section-welcome__img" src={img2} alt="img2"></img>
-                    </div>
-
-                    <div className="section-welcome__right-container">
-                        <h1 className="section-welcome__header section-welcome__header--1">Welcome To</h1>
-                        <h1 className="section-welcome__header section-welcome__header--2">Ly Taekwondo</h1>
-                        <p className="section-welcome__paragraph section-welcome__paragraph--1">
-                            360 Kick provides Taekwondo and mindfulness classes,
-                            that helps busy professionals and business owners to
-                            release stress, and develop both physical and mental resilience,
-                            so that they can be more focused and efficient at work, also gives
-                            the mental toughness and agility to deal with day to day challenges
-                            with ease and power
-                        </p>
-
-                        <p className="section-welcome__paragraph section-welcome__paragraph--2">
-                            Blending martial arts and mindfulness helps
-                            individuals deepen the connections with their body
-                            and mind, so that cultivate a healthier relationship
-                            with themselves which plays an important part of ones
-                            physical, mental and financial well-being.
-                        </p>
-
-                        <h1 className="section-welcome__header section-welcome__header--3">Dont forget to catch us here</h1>
-
-                        <div className="section-welcome__btn2">
-                            <Button
-                                className="btn btn--secondary"
-                                link="https://www.youtube.com/watch?v=K41REhBIfAQ"
-                                title="About Us"
-                            />
-                        </div>
-
-                        <div className="section-welcome__icon_container">
-                            <a href="https://www.instagram.com/ly_taekwondo"><img className="section-welcome__icons section-welcome__icons--instag_icon" src={instagram} alt="instagram icon" /></a>
-                            <a href="https://www.facebook.com"> <img className="section-welcome__icons section-welcome__icons--facebook_icon" src={facebook} alt="facebook icon" /></a>
-                            <a href="https://www.youtube.com/channel/UC4towYpMTj6oK0xVYpMVmvA?"> <img className="section-welcome__icons section-welcome__icons--youtube_icon" src={youtube2} alt="youtube icon"></img></a>
-                        </div>
-                    </div> */}
                 </div>
 
                 <div className="workshop-container">
                     <h1 className="workshop__header">Trainning Programmes</h1>
-                    <div className="card-container"> {/*this will be the container to hold our card components, so we can place them via grid or flexbox*/}
+                    <div className="card-container">
 
                         < Card
                             className="card"
@@ -152,24 +98,34 @@ class Home extends Component {
                 </div>
 
                 <div className="testimony-container">
-                    < Testimony />
-
-
+                    < Testimony
+                        backgroundImg={img5}
+                    />
                 </div>
 
-                <InfoCard
+                <div className="lightbox-container">
+                    < Lightbox />
+                </div>
 
-                    className="right"
-                    backgroundImg={img2}
-                    imgClip="left" //clip path position 
-                    //contentClass-- will switch between testimonal and normal contents
-                    contentPosition="left"
-
-
-
-
-                />
-
+                <div className="taekwondo-container">
+                    <InfoCard
+                        className="right"
+                        backgroundImg={img7}
+                        imgClip="left" //clip path position 
+                        contentPosition="left"
+                        headerFontSize="5.5rem"
+                        infoCardTitle="What Is Taekwondo"
+                        infoCardSubtitle="The way of the foot and fist"
+                        infoCardText="The word Taekwondo translates as
+                        the way of the foot and the fist. 'Tae' means to break or attack with the foot, 
+                        'kwon' means to break with the fist and 'do' translate as the art or way"
+                        infoCardText2="Although the name has only officially been used since 1955, 
+                        it has roots from a range of Korean martial arts that began more than 2,000 years ago"
+                        btnClassName="btn btn--secondary"
+                        btnLink="https://www.youtube.com/watch?v=K41REhBIfAQ"
+                        btnTitle="Read More"
+                    />
+                </div>
             </div >
 
         )
