@@ -1,0 +1,87 @@
+
+/* Colour Variables */
+:root {
+    --color-primary: #cc0018;
+    --color-secondary: #3A4256;
+
+    --color-dark-primary: #232323;
+    --color-light-primary: #f2f1f1;
+    --color-light-secondary: #707070;
+
+    --color-primary-text: #3A4256;
+    --color-secondary-text: #cc0018;
+
+}
+
+/* Font Variables*/ 
+:root {
+    --heading-main: 7.5rem;
+    --heading-secondary: 5rem;
+    --heading-secondary-2: 4.5rem;
+    --heading-small: 2rem;
+
+    --heading-sub: 1.9rem;
+    
+    --normal-font-size: 1.45rem;
+    --small-font-size: 1.2rem;
+
+    --line-height-primary: 2.3rem;
+    --line-height-secondary: 2.1rem;
+
+    --letter-space-header: .3rem;
+    --letter-space-header-2: 0.5rem;
+    --letter-space-text: .1rem;
+    --letter-space-text-2: 0.08rem;
+
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Dancing Script', cursive;
+
+}
+
+/* Utility classes */
+.margin-top-lg { margin-top: 10rem; }
+.margin-top-md { margin-top: 7rem; }
+.margin-top-sm { margin-top: 5rem; }
+.margin-top-xs { margin-top: 2rem; }
+.margin-bottom-lg { margin-bottom: 10rem; }
+.margin-bottom-med { margin-bottom: 7rem; }
+.margin-bottom-sm { margin-bottom: 5rem; }
+.margin-bottom-xs { margin-bottom: 2rem; }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    }
+
+    html {
+
+        box-sizing: border-box;
+        font-size: 62.5%; 
+         /* 1 rem = 10px when default font-size is 16px */
+
+         // Extra large screens
+        @media only screen and (max-width: 192em) {
+            font-size: 81.25%;
+        }
+
+        // Large screens
+        @media only screen and (max-width: 136em) {
+            font-size: 62.5%;
+        }
+    
+        // Medium screens
+        @media only screen and (max-width: 78em) {
+            font-size: 50%;
+        }
+
+        // Small screens
+        @media only screen and (max-width: 37.5em) {
+            font-size: 45%;
+        }
+        
+    }
+
+
+// we need to take advantage or variable headers 
