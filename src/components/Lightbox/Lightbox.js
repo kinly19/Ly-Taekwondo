@@ -19,7 +19,8 @@ const Lightbox = (props) => {
     const photos = [
 
         {
-            src: img1
+            src: img1,
+
         },
 
         {
@@ -85,7 +86,7 @@ const Lightbox = (props) => {
             <div className="lightbox__image-container" >
                 {photos.map((item, index) => (
 
-                    <img className={`lightbox__images lightbox__images--${index + 1}`} src={item.src} key={index} onClick={() => handleClassToggle(index)}></img>
+                    <div className={`lightbox__images lightbox__images--${index + 1}`} style={{ backgroundImage: `url(${item.src})` }} key={index} onClick={() => handleClassToggle(index)}></div>
 
                 ))}
             </div>
