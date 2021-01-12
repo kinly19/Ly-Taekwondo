@@ -35,7 +35,6 @@ const Testimony = (props) => {
 
         setCurrent(testimonials[index]) //setCurrent too
         setActive(index)
-
     }
 
 
@@ -54,27 +53,21 @@ const Testimony = (props) => {
             <div className="testimony__content">
 
                 <div className="testimony__content-container">
-                    <h1 className="testimony__header">What Others Had To Say</h1>
-                    <p className="testimony__text">{current.quote}</p> {/* this comes from testimonals state object property quote */}
+                    <h1 className="testimony__header margin-bottom-xs">What Others Had To Say</h1>
+                    <p className="testimony__text margin-bottom-xs">{current.quote}</p> {/* this comes from testimonals state object property quote */}
                     <h3 className="testimony__subtitle">{current.client}</h3>
                 </div>
 
-
                 <div className="testimony__span-container">
 
-
                     {testimonials.map((content, index) => ( // map through Testimonals and for each position of the array we are going to create a span 
-
                         <div className="testimony__span" key={index} onClick={() => handleSetClick(index)} style={index === active ? { backgroundColor: ' #394154', transform: 'scale(1.3)' } : {}} />
-
                     ))}
 
                 </div>
 
             </div>
         </div>
-
-
     )
 }
 
