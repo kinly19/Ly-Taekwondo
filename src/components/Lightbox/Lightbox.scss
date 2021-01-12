@@ -15,7 +15,7 @@
         flex-flow: wrap;
         justify-content: center;
         width: 70vw;
-        margin-bottom: 7rem;
+        margin-bottom: 19rem;
 
     }
 
@@ -27,25 +27,27 @@
         letter-spacing: 0.3rem;
         text-transform: uppercase;
         margin-bottom: 7rem;
+        margin-top: 7rem;
     }
     
 
 
     &__images{
         
-        object-fit: contain;
-        height: 28vh;
+        // object-fit: contain;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 25rem;
+        width: 35rem;
         margin: 1.2rem;
         box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
+
         cursor: pointer;
         transition: transform 0.2s;
         border-radius: .3rem;
         // border: .9rem solid #3e4556;
         
-        &--5 {
-            width: 20.7vw;
-            object-fit: cover;
-        }
 
         &:hover{
             transform: scale(1.01);
