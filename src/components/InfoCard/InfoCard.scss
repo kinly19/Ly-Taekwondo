@@ -1,22 +1,22 @@
 .infoCard {
 
-    height: 80vh;
-    width: 100vw;
-    position: relative;
     display: flex;
-    color: red;
-
+    height: min-content;
+    width: auto;
+    position: relative;
+    color: var(--color-primary);
+   
     &--right {
         flex-direction: row-reverse;
     }
 
-    &__img{
+    &__img {
 
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        width: 55vw;
         height: 80vh;
+        width: 55vw;
 
         &--right {
             clip-path: polygon(0px 0px, 80% 0%, 100% 100%, 0% 100%);
@@ -29,90 +29,73 @@
 
     &__content {
        
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(7, min-content);
-        column-gap: 3rem;
-        align-content: center;
-        font-size: 1.5rem;
+        display:flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         position: absolute;
-        width: 57vw;
-        height: 80vh;
-
+        height: 100%;
+        width: 50vw;
+        padding: 5rem 12rem 5rem 12rem;
+        
         &--left {
             left:0;
-            clip-path: polygon(0px 0px, 80% 0%, 100% 100%, 0% 100%);
         }
 
         &--right {
             right:0;
-            clip-path: polygon(0px 0px, 100% 0%, 100% 100%, 20% 100%);
         }
     }
-    &__testimonial {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        font-weight: 400;
-    }
 
-    &__header{
+    &__header {
 
-        color:#cc0018;
-        grid-column: 2/5;
         justify-self: center;
-        letter-spacing: .3rem;
+        letter-spacing: var(--letter-space-header);
         
-        &--1{
-           grid-row: 1;
-           font-size: 6.9rem; 
+        &--1 {
+
+           font-size: var(--heading-main); 
         }
-        &--2{
-            grid-row: 2;
-            font-size: 1.9rem;
-            font-weight: 10;
-            letter-spacing: 0.5rem;
-            margin-bottom: 5rem;
+
+        &--2 {
+
+            font-size: var(--heading-small);
+            font-weight: 100;
+            letter-spacing: var(--letter-space-header-2);
         }
-        &--3{
-            grid-row: 6;
-            margin-bottom: 3rem;
-            font-family: 'Dancing Script', cursive;
-            font-weight: 550;
+
+        &--3 {
+
+            text-align: center;
+            width: 100%;
+            font-family: var(--font-secondary);
+            font-size: var(--heading-secondary-2);
+            font-weight: 500;   
         }
+
     }
 
     &__paragraph {
-
-        grid-column: 2/5;
-        margin-bottom: 3rem;
-        font-size: 1.45rem;
-        text-align: center;
-        letter-spacing: 0.1rem;
-        color: #707070;
         
-        &--1{
-            grid-row: 3/4;
-        }
-
-        &--2{
-            grid-row: 4/5;
-            margin-bottom: 4rem;
-        }
+        font-size: 1.45rem;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: var(--letter-space-text-2);
+        line-height: 2.3rem;
+        color: var(--color-light-secondary);
+        
     }
 
     &__icon-container {
 
-        grid-row: 7;
-        grid-column: 2/5;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
     }
 
     &__icons {
 
-        height: 6.5rem;
+        height: 4.5rem;
+        margin: 1rem;
         opacity: 0.9;
 
         &--youtube_icon {
@@ -123,15 +106,274 @@
             transform: scale(1.1);
             opacity: 1;
         }
-        
     }
 
     &__btn {
+
         grid-column: 3;
         grid-row: 5;
         justify-self: center;
-        margin-bottom: 3rem;
     }
-
 }
+
+
+
+// @media screen and (max-width: 192rem) { // larger sizes 4k
+
+//     .infoCard {
+
+//         background-color: rgb(245, 247, 150);
+
+//         &__content {
+       
+//             // padding: 5rem 12rem 5rem 10rem;
+//             padding: 5rem 15rem 5rem 10rem;
+                   
+//             }
+
+//         &__header {
+
+//             font-size: 6.9rem;
+//             // font-size: 3.9vw;
+//             // letter-spacing: .5rem;
+
+            
+//             &--2 {
+               
+//                 font-size: 1.9rem;
+                
+//             }
+    
+//             &--3 {
+                
+//                 font-size: 4rem;
+//             }    
+        
+//         }
+
+//         &__paragraph {
+
+//             font-size: 1.45rem;
+//             // font-size: .8vw;
+//             // padding: 0 10rem 0 5rem;
+           
+//         }
+
+    
+//         &__icons {
+    
+//             // height: 2.5vw;
+//             // cursor: pointer;
+//         }
+        
+//     }
+// }
+
+@media screen and (max-width: 103.125em) { 
+
+    .infoCard {
+
+        &__header {
+
+            &--1 {
+                font-size: 4.5vw;
+            }
+           
+            &--3 {
+                
+                font-size: 2.7vw;
+               
+                text-align: center;
+            }    
+        }
+    }
+}
+
+@media screen and (max-width: 90em) {
+    .infoCard {
+        &__header {
+
+            &--1 {
+                font-size: 6.9;
+            }
+        }
+
+        &__content {
+            padding: 5rem 8rem 5rem 8rem;
+        }
+    }
+}
+
+@media screen and (max-width: 78em) { //75rem 
+   
+
+    .infoCard {
+
+        &__img {
+
+            clip-path: none;
+            width: 100%;
+            height: 85vh;
+            background-position: center;
+        }
+
+        &__content {
+
+            background: linear-gradient(90deg, #f0f0f0c4 0%, #f7f6f6f7 35%, #ece8e8e0 100%);
+            padding: 0 6rem 0 7rem;
+            height: 100%;   
+        }
+
+        &__header {
+
+            font-size: 6vw;
+           
+            &--2 {
+               
+                font-size: 2.5rem;
+                margin-bottom: 2rem; 
+            }
+    
+            &--3 {
+                
+                font-size: 2.5vw;
+                margin-top: 2rem;
+            }    
+        
+        }
+
+        &__paragraph {
+
+            font-size: 1.2vw;
+            line-height: 2.5rem;
+        }
+
+        &__icons {
+    
+           height: 3vw;
+        }
+        
+    }
+}
+
+
+
+@media screen and (max-width: 64em) { //large tablets portrait onwards
+
+    .infoCard {
+        
+        display: flex;
+        flex-direction: column;
+
+        &__img {
+
+            background-size: cover;
+            height: 55vh;
+            width: 100%;
+            background-position-x: center;
+        }
+
+        &__content {
+
+            position: unset;
+            height: 100%;
+            width: 100%;
+            padding: 7rem 10rem 7rem 10rem;
+        }
+
+        &__header {
+
+           &--1 {
+               font-size: 9rem;
+               padding: 0 8rem 0 8rem;
+           }
+           
+            &--2 {
+               
+                font-size: 3rem; 
+                margin-bottom: 3rem;
+            }
+    
+            &--3 {
+                
+                font-size: 4.5rem;
+            }    
+        
+        }
+
+        &__paragraph {
+
+            padding: 1rem 10rem 1rem 10rem;
+            font-size: 2rem;
+        }
+
+    
+        &__icons {
+    
+           height: 4.5vw;
+        }
+        
+    }
+}
+
+
+@media screen and (max-width: 37.5em) {
+
+    .infoCard {
+        
+        display: flex;
+        flex-direction: column;
+
+        &__img {
+
+            background-size: cover;
+            height: 55vh;
+            width: 100%;
+            background-position-x: center;
+        }
+
+        &__content {
+
+            position: unset;
+            height: 100%;
+            width: 100%;
+            padding: 5vh 15vw 5vh 15vw;
+        }
+
+        &__header {
+
+           font-size: 6vw;
+        
+           &--1 {
+               padding: 0 8rem 0 8rem;
+           }
+           
+            &--2 {
+               
+                font-size: 2.1vw; 
+            }
+    
+            &--3 {
+                
+                font-size: 4vw;
+            }    
+        
+        }
+
+        &__paragraph {
+
+            font-size: 1.5vw;
+            
+        }
+
+    
+        &__icons {
+    
+           height: 4.5vw;
+        }
+        
+    }
+}
+
+
 
