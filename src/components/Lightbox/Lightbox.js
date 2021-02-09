@@ -83,7 +83,7 @@ const Lightbox = (props) => {
         <div className="lightbox">
             <h1 className="lightbox__header">Gallery</h1>
 
-            <div className="lightbox__image-container" >
+            <div className="lightbox__image-container">
                 {photos.map((item, index) => (
 
                     <div className={`lightbox__images lightbox__images--${index + 1}`} style={{ backgroundImage: `url(${item.src})` }} key={index} onClick={() => handleClassToggle(index)}></div>
@@ -91,16 +91,21 @@ const Lightbox = (props) => {
                 ))}
             </div>
 
-            <div className="lightbox-active" style={active ? { display: 'flex' } : { display: 'none' }} > {/*maybe make a const style*/}
+            <div className="lightbox-active" style={active ? { visibility: 'visible', opacity: '1' } : {}} >
+
+                <button className="lightbox-active__btn-close" onClick={() => handleClassToggleOff()}>
+                    <svg className="lightbox-active__icon lightbox-active__icon--btnclose">
+                        <use xlinkHref={sprite + "#icon-close"}></use>
+                    </svg>
+                </button>
+
                 <div className="lightbox-active__image-container">
                     <img className="lightbox-active__images" src={photos[count].src} onClick={() => handleClassToggleOff()}></img>
-
                 </div>
 
                 <button className="lightbox-active__button lightbox-active__button--next" onClick={() => handleNextClick()}>
                     <svg className="lightbox-active__icon">
                         <use xlinkHref={sprite + "#icon-chevron-thin-right"}></use>
-
                     </svg>
                 </button>
 
@@ -112,7 +117,7 @@ const Lightbox = (props) => {
 
             </div>
 
-        </div >
+        </div>
     )
 }
 
