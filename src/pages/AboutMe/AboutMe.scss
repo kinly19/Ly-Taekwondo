@@ -1,111 +1,89 @@
-.mainContainer {
+.AboutMe-gridContainer {
 
    display: grid;
    grid-template-columns: 10vw 5vw repeat(8, 1fr) 10vw;
    grid-template-rows: repeat(3, 20vh) repeat(2, 10vh)  min-content;
-   // background-color: #3A4256;
    background-color: #F8F8F8;
    font-family: 'Roboto', sans-serif;
    font-weight: 500;
 
 }
 
-
 .bgImg-container {
 
    grid-column: 1/ span all;
    grid-row: 1/6;
-
    background-image: url(../../assets/img/img13.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: bottom;
-  
 }
 
-
-.container-center {
+.AboutMe-container {
 
    grid-column: 2 / 11;
    grid-row: 4 / span all;
-
+   width: 67vw;
    background-color: #ECECEC;
-  
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
-   margin-left: 5rem;
-   
-
-   h1 {
+   &__header {
      
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: #3A4256;
       height: 8rem;
+      width: 100%;
       color: whitesmoke;
-    
       font-size: 4.2rem;
       font-weight: 300;
       letter-spacing: .15rem;
       text-shadow: 2px 6px 3px rgba(0,0,0,0.05);
       text-transform: uppercase;
-     
-
-      
-      
    }
-
-
 }
 
+.content-left {
 
-.container-left {
-
-   grid-column: 2 / 7;
+   grid-column: 2 / 6;
    grid-row: 5 / span all;   
    position: sticky;
-   top: 0;
+   top: 4rem;
    margin-top: 4rem;
-   
-   height: 100vh;
+   margin-left: 5rem;
+   height: 96vh;
 
    img {
       object-fit: contain;
       width: 30vw;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
    }
-   
 }
 
+.content-right {
 
-.mainContent-right {
-  
-   grid-column: 5 / 11;
-   grid-row: 5 / span all;
- 
-   margin-left: 8rem;
-   color:#3A4256;
-
-   
+   width: 40vw;
+   padding: 0 0rem 0 7rem;
+   color:#3A4256; 
 }
-
 
 .aboutMe {
 
-   display: flex;
-   flex-direction: column;
-   padding-left: 15rem;
-   padding-right: 15rem;
+   padding-right: 7rem;
    padding-bottom: 5rem;
    border-bottom: 1.5px solid #3a425659;
-  
 
    &__header {
 
       margin-top: 7rem;
       margin-bottom: 3rem;
       font-size: 4.5rem;
-      text-shadow: 2px 6px 3px rgba(0,0,0,0.05);
+      text-shadow: 1px 2px 4px rgba(150, 150, 150, 0.43);
       text-transform: uppercase;
       letter-spacing: .15rem;
 
@@ -118,12 +96,10 @@
 
       margin-bottom: 3rem;
       font-size: 1.8rem;
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: .1rem;
       text-transform: uppercase;
       color:#CC0018;
-     
-
    }
 
    &__text {
@@ -131,17 +107,15 @@
       margin-bottom: 3rem;
       margin-right: 3.5rem;
       font-size: 1.45rem;
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: .05rem;
       line-height: 2.45rem;
    }
-
 }
 
 .skillSet {
 
-   margin-left: 15rem;
-
+   padding-right: 7rem;
 
    &__list-container {
    
@@ -149,39 +123,39 @@
       flex-flow: wrap;
       justify-content: space-evenly;
       align-items: baseline;
-      width: 40vw;
       margin-top: 10rem;
       margin-bottom: 5rem;
-      
    }
    
    &__list {
       display: flex;
       flex-direction: column;
-     
       height: min-content;
       width: 15vw;
       margin-bottom: 5rem;
       padding-right: 5rem;
-
    }
 
-   &__subheader {
+   &__list-header {
 
       font-size: 1.5rem;
       font-weight: 600;
       letter-spacing: .10rem;
-      text-transform: capitalize;
+      text-transform: uppercase;
+      color:#3a4256dc;;
+      transition: all .2s;
 
+      &:hover {
+         transform: scale(1.020);
+         color:#3a4256;
+      }
    }
 
-   &__text {
+   &__list-details {
 
       margin-top: 3rem;
-      
       font-size: 1.4rem;
       font-weight: 300;
-      
    }
 }
 
