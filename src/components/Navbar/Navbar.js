@@ -26,6 +26,7 @@ const Navbar = (props) => {
 
     const [navToggle, setNavToggle] = useState(true);
 
+
     const navbarToggle = () => {
         setNavToggle(true);
     }
@@ -33,11 +34,6 @@ const Navbar = (props) => {
     const navbarUntoggle = () => {
         setNavToggle(false);
     }
-
-
-
-
-
 
     const [onscroll, setOnScroll] = useState(0);
 
@@ -47,36 +43,23 @@ const Navbar = (props) => {
 
         if (window.scrollY > onscroll) {
             setOnScroll(window.scrollY);
-            // untoggle();
             navbarUntoggle()
+
         } else if (window.scrollY < onscroll) {
             setOnScroll(window.scrollY);
-            // toggle();
             navbarToggle();
 
         }
     }
     //effect hook to untoggle our toggled state when react detects a resize on the page or scrollevent
     useEffect(() => {
+
         window.addEventListener("resize", untoggle);
         window.addEventListener("scroll", untoggle);
         window.addEventListener("scroll", handleScroll);
 
         return () => window.removeEventListener("resize", untoggle, "scroll", untoggle, "scroll", handleScroll);
     })
-
-
-    // }
-    // const scrolling = () => {
-    //     console.log(window.scrollY);
-    // }
-
-
-
-
-
-
-
 
     return (
 
