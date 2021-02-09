@@ -26,7 +26,10 @@ const Navbar = (props) => {
 
     const [navToggle, setNavToggle] = useState(true);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4ee66cc497a56d9d8566e607d137607e09d2c58
     const navbarToggle = () => {
         setNavToggle(true);
     }
@@ -35,6 +38,14 @@ const Navbar = (props) => {
         setNavToggle(false);
     }
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> e4ee66cc497a56d9d8566e607d137607e09d2c58
     const [onscroll, setOnScroll] = useState(0);
 
     //we want to use the position of window.scrollY, when scrolling up to show a class (making use of toggle function) when scrolling down to hide a class (untoggle function)
@@ -43,17 +54,28 @@ const Navbar = (props) => {
 
         if (window.scrollY > onscroll) {
             setOnScroll(window.scrollY);
+<<<<<<< HEAD
             navbarUntoggle()
 
         } else if (window.scrollY < onscroll) {
             setOnScroll(window.scrollY);
+=======
+            // untoggle();
+            navbarUntoggle()
+        } else if (window.scrollY < onscroll) {
+            setOnScroll(window.scrollY);
+            // toggle();
+>>>>>>> e4ee66cc497a56d9d8566e607d137607e09d2c58
             navbarToggle();
 
         }
     }
     //effect hook to untoggle our toggled state when react detects a resize on the page or scrollevent
     useEffect(() => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4ee66cc497a56d9d8566e607d137607e09d2c58
         window.addEventListener("resize", untoggle);
         window.addEventListener("scroll", untoggle);
         window.addEventListener("scroll", handleScroll);
@@ -61,6 +83,22 @@ const Navbar = (props) => {
         return () => window.removeEventListener("resize", untoggle, "scroll", untoggle, "scroll", handleScroll);
     })
 
+<<<<<<< HEAD
+=======
+
+    // }
+    // const scrolling = () => {
+    //     console.log(window.scrollY);
+    // }
+
+
+
+
+
+
+
+
+>>>>>>> e4ee66cc497a56d9d8566e607d137607e09d2c58
     return (
 
         <nav className="navbar">
