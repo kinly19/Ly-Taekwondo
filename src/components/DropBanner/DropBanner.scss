@@ -1,0 +1,148 @@
+.banner {
+   
+    height: min-content;
+    width: 100%;
+   
+
+    &:hover .banner__dropDownIcon {
+        fill: rgb(160, 9, 9);
+    }
+
+    &__header {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:#232323;
+        height: 23rem;
+        // color:var(--color-light-primary);
+        // color: #f4f4f4;
+        color: #dbdbdb;
+        letter-spacing: .3rem;
+       
+
+        cursor: pointer;
+
+        &:hover {
+
+            .banner__heading {
+                font-size: 8.1rem;
+                
+            }
+            .banner__subHeading {
+                font-size: 2.35rem;
+            }
+
+            .banner__heading, .banner__subHeading {
+                color: #f4f4f4;
+                transition: all ease-in-out .2s;
+                
+            }
+
+        }
+
+
+        &:active {
+
+            .banner__heading {
+                font-size: 7.9rem;
+               
+            }
+
+            .banner__subHeading { 
+               font-size: 2.25rem;
+            }
+
+        }
+        
+    }
+
+    &__heading {
+
+        // color:var(--color-light-primary);
+        // letter-spacing: var(--letter-space-header);
+        // font-size: var(--heading-secondary-2);
+        // text-transform: uppercase;
+
+        font-size: 8rem;
+        // color:var(--color-light-primary);
+        text-transform: uppercase;
+        font-weight: 500;
+      
+    }
+
+    &__subHeading {
+       
+        margin-top: .7rem;
+        font-weight: 300;
+        font-size: 2.3rem;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+    }
+
+    &__drop-content {
+        
+        background-color: rgba(153, 205, 50, 0.219);
+        visibility: visible;
+        height: 0;
+        width: 80%;
+        margin: 0 auto;
+       
+
+        text-align: center;
+
+        transition: all ease-in-out .5s;
+    }
+
+    &__drop-heading {
+
+        font-size: 8.5rem;
+        color: #5B5B5B;
+        text-transform: uppercase;
+        letter-spacing: .3rem;
+        font-weight: 700;
+        padding-top: 10rem;
+    }
+
+    &__drop-subHeading {
+        
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    &__drop-info {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    &__drop-text {
+        
+    }
+
+    &__footer {
+        // background-color:#171717;
+        background-color: #1b1b1b;
+        display: flex;
+        justify-content: center;
+        height: 3.5rem;
+        width: 100%;
+    }
+
+    &__dropBtn {
+        
+        background-color: transparent;
+        border: none;
+        outline: none;
+       
+    }
+
+    &__dropDownIcon {
+
+        fill:var(--color-light-primary);
+        height: 3.5rem;
+        width: 3.5rem;
+        cursor: pointer;
+    }
+   
+}
