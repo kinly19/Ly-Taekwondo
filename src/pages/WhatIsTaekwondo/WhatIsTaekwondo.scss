@@ -1,84 +1,56 @@
-
-.Taekwondo-gridContainer {
+.Taekwondo-layout {
     
-    display: grid;
-    grid-template-columns: 10vw repeat(8, 1fr) 10vw;
-    grid-template-rows: repeat(3, 20vh) repeat(2, 10vh)  min-content;
-    background-image: url(../../assets/img/img7.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    color:#3A4256;
+    background-color: #fafafa;
+    width: 100vw;
 }
 
-.Taekwondo-centerContainer {
-    grid-column: 2 / 10;
-    grid-row: 4;
-    background-color: #ECECEC;
+.Taekwondo-main {
+
     height: min-content;
-    width: 67vw;
-    margin: 0 auto;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    font-family: var(--font-primary);
+    font-size: 1.45rem;
+    font-weight: 400;
+    color: var(--color-light-secondary);
 }
 
-.taekwondo {
-
+.Taekwondo {
+    
     &__header {
+
         display: flex;
         align-items: center;
-        height: 8rem;
-        padding-left: 20rem;
-        background-color:#343434;
-        color: #fab257;
+        height: 10vh;
+        min-height: 7rem;
+        background-color:var(--color-dark-primary); 
+        font-size: 3.5rem;
         text-transform: uppercase;
-        font-size: 2.5rem;
+        color: var(--color-light-primary);
+        letter-spacing: var(--letter-space-header);
         font-weight: 500;
-        letter-spacing: 0.45rem;
+        padding-left: 15% ;  
     }
 
-    &__main-content {
+    &__subHeader {
 
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        font-size: 2.7rem;
+    }
+
+
+    &__text-container {
+        
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        margin: 7rem 20rem 7rem 20rem;
-
-        &--1 {
-            height: 40vh;
-        }
-
-        &--2{
-            height: fit-content;
-            justify-content: flex-start;
-        }
+        justify-content: space-between;
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 5rem;
     }
-
-    &__subheader {
-
-        font-size: 2.3rem;
-        font-weight: 500;
-        text-transform: capitalize;
-        letter-spacing: 0.20rem;
-    }
-
-    &__text {
-
-        margin-top: 4rem;
-        font-size: 1.55rem;
-        font-weight: 300;
-        font-weight: 400;
-        letter-spacing: .05rem;
-        line-height: 2.7rem;
-    }
-
-    .kupRanks-container {
     
-        margin: 5rem 10rem 10rem 10rem;
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    &__text {
+       
+        font-size: 1.7rem;
+        line-height: 2.7rem;
     }
 }
