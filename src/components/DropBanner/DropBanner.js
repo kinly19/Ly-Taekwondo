@@ -29,9 +29,9 @@ const DropBanner = (props) => {
                 <h1 className="banner__drop-heading">{props.contentTitle}</h1>
                 <h1 className="banner__drop-subHeading">{props.contentSubtitle}</h1>
 
-                <div className="banner__drop-info">
-                    <p className="banner__drop-text">{props.contentText}</p>
-                    <p className="banner__drop-text">{props.contentText2}</p>
+                <div className="banner__drop-info margin-top-sm">
+                    <p className="banner__drop-text margin-bottom-sm">{props.contentText}</p>
+                    <p className="banner__drop-text margin-bottom-sm">{props.contentText2}</p>
                 </div>
 
             </div>
