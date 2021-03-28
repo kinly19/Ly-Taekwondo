@@ -23,7 +23,7 @@ class WhatIsTaekwondo extends Component {
                     lBackgroundImg={img7}
                     lTitle={"Taekwondo"}
                     lSubtitle={"The Way Of The Foot And Fist"}
-                    titleFontSize="7rem"
+                // titleFontSize="7rem"
                 />
 
                 <div className="Taekwondo-main">
@@ -49,11 +49,13 @@ class WhatIsTaekwondo extends Component {
                         bannerTitle="Benefits Of"
                         bannerSubTitle="Taekwondo"
 
-                        contentHeight="100vh" //set the height of contents container
-                        contentTitle="Benefits Of"
-                        contentSubtitle="Taekwondo"
+                        contentHeight="150vh" //set the height of contents container
+                        contentTitle="Taekwondo"
+                        contentSubtitle="Improves balance, flexibility, stamina, strength and posture."
                         // contentText={<KupRanks />}
-                        contentText="Taekwondo brings health improvements such as; balance, flexibility, stamina, strength and posture."
+                        contentText="In addition to the physical health improvements, Taekwondo is also known to benefit mental health through building confidence, improved self-esteem, concentration levels and self-discipline. it is a great way to also release stress in a safe environment. Taekwondo is a fun alternative way to exercise from the standard gym. 
+                        you can meet new people and work together and connect through progressing on the life journey"
+
                         contentText2=""
 
                     />
@@ -72,16 +74,45 @@ class WhatIsTaekwondo extends Component {
                         The coloured belt sequence from white to black is as follows."
                     />
 
+                    <DropBanner
+                        bannerTitle="Kup Rank"
+                        bannerSubTitle="Grading"
+
+                        contentHeight="170vh" //set the height of contents container
+                        contentTitle="Rank Sequence"
+                        contentSubtitle="New students begin at 10th kup (White belt) and advance down in numbers from."
+                        // contentText={<KupRanks />}
+                        contentText="kuprank component goes here"
+
+                        contentText2={<KupRanks />}
+
+                    />
+
                     <InfoCard2
 
                         ModClass="contentRight" //actual css class style
                         BackgroundImg={img13}
                         backgroundPosX="20%"
                         title1="Dan Ranks"
-                        contentTitle="Black Beltss"
+                        contentTitle="Black Belts"
                         contentText1="Dan ranks increase from 1st Dan to the 10th Dan.
                         Taekwondo teaches more than just physical fighting skills and defensive techniques. 
                         it is a discipline that enhances our spirit and life through our mind and body."
+                    />
+
+                    <DropBanner
+                        bannerTitle="Dan Ranks"
+                        bannerSubTitle="Grading"
+
+                        contentHeight="100vh" //set the height of contents container
+                        contentTitle="Rank Sequence"
+                        contentSubtitle="Improves balance, flexibility, stamina, strength and posture."
+                        // contentText={<KupRanks />}
+                        contentText="In addition to the physical health improvements, Taekwondo is also known to benefit mental health through building confidence, improved self-esteem, concentration levels and self-discipline. it is a great way to also release stress in a safe environment. Taekwondo is a fun alternative way to exercise from the standard gym. 
+                        you can meet new people and work together and connect through progressing on the life journey"
+
+                        contentText2=""
+
                     />
 
                 </div>

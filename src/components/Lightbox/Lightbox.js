@@ -14,7 +14,7 @@ import sprite from "../../assets/icons/sprite.svg";
 
 
 
-const Lightbox = (props) => {
+const Lightbox = () => {
 
     const photos = [
 

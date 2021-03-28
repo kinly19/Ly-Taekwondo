@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../Button';
 import './ImgComp.scss'
 
-function ImgComp({ BackgroundImg, className, headerClass, subheaderClass, header, subHeader, activeStyle, buttonClass, buttonTitle, buttonLink }) {
+const ImgComp = ({ BackgroundImg, className, headerClass, subheaderClass, header, subHeader, activeStyle, buttonClass, buttonTitle, buttonLink }) => {
 
     let background = {
         backgroundImage: `linear-gradient(to right bottom, #cc00185e, #c208024d),url(${BackgroundImg})`

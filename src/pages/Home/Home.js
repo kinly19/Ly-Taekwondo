@@ -1,4 +1,4 @@
-import React, { Component, Route } from 'react';
+import React, { Component } from 'react';
 import './Home.scss';
 import Card from "../../components/Card";
 import Testimony from '../../components/Testimony';
@@ -19,7 +19,6 @@ import img7 from '../../assets/img/img7.jpg';
 class Home extends Component {
     render() {
         return (
-
             //container to hold main layout css grid
             <div className="main-container">
 
@@ -31,12 +30,14 @@ class Home extends Component {
 
                     <InfoCard
 
-                        className="right"
                         backgroundImg={img2}
-                        imgClip="left" //clip path position 
-                        contentPosition="left"
+                        mainHeaderClass="main-red" // these are actual class styles from css 
+                        subHeaderClass="sub-red"
+                        headerSecondary="secondary-red"
+
                         infoCardTitle="Welcome To"
                         infoCardSubtitle="Ly Taekwondo"
+
                         infoCardText="360 Kick provides Taekwondo and mindfulness classes,
                         that helps busy professionals and business owners to
                         release stress, and develop both physical and mental resilience,
@@ -48,6 +49,8 @@ class Home extends Component {
                         and mind, so that cultivate a healthier relationship
                         with themselves which plays an important part of ones
                         physical, mental and financial well-being."
+                        infoCardHeader3="Dont forget to catch us here"
+
                         btnClassName="btn btn--secondary"
                         btnLink="/AboutMe"
                         btnTitle="Read More"
@@ -108,19 +111,26 @@ class Home extends Component {
                 </div>
 
                 <div className="taekwondo-container">
+
                     <InfoCard
-                        className="right"
+
                         backgroundImg={img7}
-                        imgClip="left" //clip path position 
-                        contentPosition="left"
-                        headerFontSize="5.5rem"
+
+                        mainHeaderClass="main-red" //these are actual class styles from css (infoCard)
+                        headerFontSize="var(--heading-secondary)"
+                        subHeaderClass="sub-red"
+                        headerSecondary="secondary-red"
+
                         infoCardTitle="What Is Taekwondo"
                         infoCardSubtitle="The way of the foot and fist"
+
                         infoCardText="The word Taekwondo translates as
                         the way of the foot and the fist. 'Tae' means to break or attack with the foot, 
                         'kwon' means to break with the fist and 'do' translate as the art or way"
                         infoCardText2="Although the name has only officially been used since 1955, 
                         it has roots from a range of Korean martial arts that began more than 2,000 years ago"
+                        infoCardHeader3="Dont forget to catch us here"
+
                         btnClassName="btn btn--secondary"
                         btnLink="https://www.youtube.com/watch?v=K41REhBIfAQ"
                         btnTitle="Read More"
@@ -131,8 +141,5 @@ class Home extends Component {
         )
     }
 }
-
-
-
 
 export default Home
