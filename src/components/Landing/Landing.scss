@@ -12,15 +12,6 @@
     font-family: var(--font-primary);
     color: var(--color-light-primary);
 
-    &__title {
-
-        font-size: 8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.6rem;
-        font-weight: 500;
-        margin-bottom: 1rem;
-    }
-
     &__subtitle {
 
         font-size: 1.9rem;
@@ -28,5 +19,4 @@
         font-weight: 100;
         margin-bottom: 1.5rem;
     }
-   
 }
