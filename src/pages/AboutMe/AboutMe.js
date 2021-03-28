@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './AboutMe.scss';
 import img6 from '../../assets/img/img6.jpg';
 import Landing from '../../components/Landing/Landing';
-import InfoCard from '../../components/InfoCard';
+import InfoCard from '../../components/Cards/InfoCard';
 
 class AboutMe extends Component {
     render() {

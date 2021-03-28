@@ -1,9 +1,9 @@
 import React from 'react';
 import './InfoCard.scss';
-import Button from "../../components/Button";
-import instagram from '../../assets/img/instagram.svg';
-import facebook from '../../assets/img/facebook.svg';
-import youtube2 from '../../assets/img/youtube2.svg';
+import Button from "../../../components/Button";
+import instagram from '../../../assets/img/instagram.svg';
+import facebook from '../../../assets/img/facebook.svg';
+import youtube2 from '../../../assets/img/youtube2.svg';
 
 
 const InfoCard = (props) => {

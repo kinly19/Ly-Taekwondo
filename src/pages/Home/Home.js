@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './Home.scss';
-import Card from "../../components/Card";
+import Card from "../../components/Cards/TrainningCard";
 import Testimony from '../../components/Testimony';
 import Slider from '../../components/Slider';
-import InfoCard from '../../components/InfoCard';
+import InfoCard from '../../components/Cards/InfoCard';
 import Lightbox from '../../components/Lightbox';
 import '../../components/Button/Button.scss';
 import img2 from '../../assets/img/img2.jpg';

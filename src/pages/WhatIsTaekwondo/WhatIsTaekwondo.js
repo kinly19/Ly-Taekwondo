@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 // import KupRanks from '../../components/KupRanks/KupRanks';
 import Landing from '../../components/Landing'
-import InfoCard2 from '../../components/InfoCard2'
+import InfoCard2 from '../../components/Cards/InfoCard2'
 import DropBanner from '../../components/DropBanner'
 import img7 from '../../assets/img/img7.jpg'
 import img13 from '../../assets/img/img13.jpg'
