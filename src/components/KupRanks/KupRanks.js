@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './KupRanks.scss';
 
@@ -13,7 +13,7 @@ const KupRanks = (props) => {
             beltColor: "white",
             beltStripe: "none",
             title: "The White Belt",
-            details: "White signifies the innocence of the beginner and his ignorance of Taekwondo."
+            details: "White signifies the innocence of the beginner and their ignorance of Taekwondo."
 
         },
 
@@ -21,8 +21,8 @@ const KupRanks = (props) => {
             kupRank: "9TH",
             beltColor: "white",
             beltStripe: "yellow",
-            title: "The White/Yellow Stripe",
-            details: "Each stripe on the end of the belt represents an intermediate step towards the next rank."
+            title: "White Belt Yellow Stripe",
+            details: "Each stripe represents an intermediate step towards the next rank."
 
         },
 
@@ -39,8 +39,8 @@ const KupRanks = (props) => {
             kupRank: "7TH",
             beltColor: "yellow",
             beltStripe: "green",
-            title: "The Yellow/Green Stripe",
-            details: "Each stripe on the end of the belt represents an intermediate step towards the next rank."
+            title: "Yellow Belt Green Stripe",
+            details: "Each stripe represents an intermediate step towards the next rank."
 
         },
 
@@ -57,8 +57,8 @@ const KupRanks = (props) => {
             kupRank: "5TH",
             beltColor: "green",
             beltStripe: "blue",
-            title: "The Green/Blue Stripe",
-            details: "Each stripe on the end of the belt represents an intermediate step towards the next rank."
+            title: "Green Belt Blue Stripe",
+            details: "Each stripe represents an intermediate step towards the next rank."
 
         },
 
@@ -75,8 +75,8 @@ const KupRanks = (props) => {
             kupRank: "3RD",
             beltColor: "blue",
             beltStripe: "red",
-            title: "The Blue/Red Stripe",
-            details: "Each stripe on the end of the belt represents an intermediate step towards the next rank."
+            title: "Blue Belt Red Stripe",
+            details: "Each stripe represents an intermediate step towards the next rank."
 
         },
 
@@ -93,8 +93,8 @@ const KupRanks = (props) => {
             kupRank: "1ST",
             beltColor: "red",
             beltStripe: "black",
-            title: "The Red/Black Stripe",
-            details: "Each stripe on the end of the belt represents an intermediate step towards the next rank."
+            title: "Red Belt Black Stripe",
+            details: "Each stripe represents an intermediate step towards the next rank."
 
         },
 
@@ -102,22 +102,24 @@ const KupRanks = (props) => {
     ]
     return (
 
-        Ranks.map((item, index) => (
-            <div className={`kup-rank kup-rank--${item.beltColor}`}>
-                <h1 className="kup-rank__header"> {item.kupRank}</h1>
-                <h2 className="kup-rank__subheader">Kup</h2>
-                <div className={`kup-rank__strip kup-rank__strip--${item.beltStripe}`}></div>
+        <div className="kupContainer">
+            {Ranks.map((item, index) => (
+                <div className={`kup-rank kup-rank--${item.beltColor}`}>
+                    <h1 className="kup-rank__header"> {item.kupRank}</h1>
+                    <h2 className="kup-rank__subheader">Kup</h2>
+                    <div className={`kup-rank__strip kup-rank__strip--${item.beltStripe}`}></div>
 
-                <div className="kup-rank__back">
-                    <div className="back-content">
-                        <h1 className="back-content__header">AKA</h1>
-                        <h2 className="back-content__subheader">{item.title}</h2>
-                        <p className="back-content__text">{item.details}</p>
+                    <div className="kup-rank__back">
+                        <div className="back-content">
+                            <h1 className="back-content__header">AKA</h1>
+                            <h2 className="back-content__subheader">{item.title}</h2>
+                            <p className="back-content__text">{item.details}</p>
+                        </div>
+
                     </div>
-
                 </div>
-            </div>
-        ))
+            ))}
+        </div>
 
 
     )
