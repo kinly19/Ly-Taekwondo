@@ -1,0 +1,77 @@
+
+.NumberCard {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    
+    // min-width: 20rem;
+    // height: 30vh;
+    height: min-content;
+    // min-height: 30rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 2.9rem;
+    color: #1d6971bb;
+
+    margin-bottom: 3rem;
+
+    &:hover {
+        transform: scale(1.05);
+
+        .NumberCard__heading {
+
+            border-color:#1D6871; 
+            color: #1D6871; 
+        }
+
+        .NumberCard__content {
+
+            font-weight: 500;
+
+            transition: ease-in-out .2s;
+        }
+       
+
+    }
+    
+    transition: transform ease-in-out .2s;
+
+
+    &__heading {
+
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        height: 14rem;
+        width: 14rem;
+        border-radius: 50%;
+        background-color: #E0F3F3;
+        border: 1rem solid #1d6971bb;
+        margin-bottom: 1.5rem;
+
+        transition: color ease-in-out .3s, 
+                    border-color ease-in-out .3s 
+
+    }
+
+    &__title {
+
+        font-size: 9rem;
+        font-weight: 500;
+    }
+
+    &__content {
+
+        padding: 2rem 1rem 2rem 1rem;
+        color: #1D6871;
+    }
+
+    &__text {
+
+        font-size: 1.6rem;
+    }
+}
+
