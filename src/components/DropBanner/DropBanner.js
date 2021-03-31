@@ -17,7 +17,6 @@ const DropBanner = (props) => {
         setActive(!active);
     }
 
-
     return (
         <div className="banner">
             <div className="banner__header" onClick={handleOnclick}>
@@ -25,7 +24,7 @@ const DropBanner = (props) => {
                 <h1 className="banner__subHeading">{props.bannerSubTitle}</h1>
             </div>
 
-            <div className="banner__drop-content" style={active ? { height: `${props.contentHeight}` } : { visibility: "hidden", opacity: "0" }}>
+            <div className="banner__drop-content" style={active ? { maxHeight: "9999px" } : { visibility: "hidden", opacity: "0", transition: "all ease-out .7s" }}>
                 <h1 className="banner__drop-heading">{props.contentTitle}</h1>
                 <h1 className="banner__drop-subHeading">{props.contentSubtitle}</h1>
 
@@ -33,6 +32,8 @@ const DropBanner = (props) => {
                     <p className="banner__drop-text margin-bottom-sm">{props.contentText}</p>
                     <p className="banner__drop-text margin-bottom-sm">{props.contentText2}</p>
                 </div>
+
+                <div className="banner__drop-infoSecondary">{props.children}</div>
 
             </div>
 
