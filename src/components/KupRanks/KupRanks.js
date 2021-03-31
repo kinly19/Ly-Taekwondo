@@ -104,7 +104,7 @@ const KupRanks = (props) => {
 
         <div className="kupContainer">
             {Ranks.map((item, index) => (
-                <div className={`kup-rank kup-rank--${item.beltColor}`}>
+                <div className={`kup-rank kup-rank--${item.beltColor}`} key={index}>
                     <h1 className="kup-rank__header"> {item.kupRank}</h1>
                     <h2 className="kup-rank__subheader">Kup</h2>
                     <div className={`kup-rank__strip kup-rank__strip--${item.beltStripe}`}></div>
