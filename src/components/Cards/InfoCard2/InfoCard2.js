@@ -7,15 +7,13 @@ const InfoCard2 = (props) => {
 
 
     const backgroundStyle = {
-        backgroundImage: `linear-gradient(to right, rgba(35, 35, 35, 0.89), rgba(35, 35, 35, 0.81)),url(${props.BackgroundImg})`,
-        backgroundPosition: `${props.backgroundPosX}`
-
+        backgroundImage: `linear-gradient(to right, rgba(35, 35, 35, 0.89), rgba(35, 35, 35, 0.81)),url(${props.BackgroundImg})`
     }
 
     return (
 
         <div className={`InfoCard2 InfoCard2--${props.ModClass}`}>
-            <div className="InfoCard2__img" style={backgroundStyle}>
+            <div className={`InfoCard2__bkgroundImg InfoCard2__bkgroundImg--${props.imgPos}`} style={backgroundStyle}>
                 <div className="InfoCard2__header-container">
                     <h1 className="InfoCard2__heading">{props.title1}</h1>
                     <h1 className="InfoCard2__heading">{props.title2}</h1>
