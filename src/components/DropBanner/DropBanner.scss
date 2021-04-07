@@ -71,16 +71,13 @@
         &:active {
 
             .banner__heading {
-                // font-size: 6.9rem;
-                // font-size: 4.8rem;
+    
                 font-size: 6.3rem;
                 font-weight: 400;
-               
             }
 
             .banner__subHeading { 
-            //    font-size: 2.25rem;
-                // font-size: 1.7rem;
+
                 font-size: 1.9rem;
             }
 
@@ -99,9 +96,7 @@
         // color:var(--color-light-primary);
         text-transform: uppercase;
         font-weight: 400;
-
         transition: all ease-in-out .19s;
-      
     }
 
     &__subHeading {
@@ -112,25 +107,23 @@
         font-size: 2rem;
         letter-spacing: 0.2rem;
         text-transform: uppercase;
+
         transition: all ease-in .19s;
     }
 
     &__drop-content {
-        
-        // background-color: rgba(153, 205, 50, 0.219);
-        visibility: visible;
+
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 0;
-
-        // width: 80%;
-        // margin: 0 auto;
-       
-
+        visibility: visible;
+        max-height: 0px;
         text-align: center;
 
-        transition: all ease-in-out .5s;
+        transition: max-height ease-in-out .7s,
+                    opacity ease-in .6s,
+                    visibility ease-in .6s;
+        
     }
 
     &__drop-heading {
@@ -158,21 +151,32 @@
 
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: left;
+        align-items: center; 
         width: 70%;
-        // background-color: aqua;
+        margin-top: 1.5rem;
+        text-align: left;
         font-size: 1.6rem;
 
-       
+        :empty { //for empty p tags not used in component
+            margin: 0rem; 
+        }
     }
 
     &__drop-text {
+
         letter-spacing: var(--letter-space-text-2);
         line-height: var(--line-height-primary);
-        // width: 70%;
         width: 60%;
-        
+    }
+
+    &__drop-infoSecondary {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 50%;
+        margin-bottom: 10rem;
+
     }
 
     &__footer {
@@ -180,12 +184,11 @@
         // background-color: #1a1a1a;
         // background-color: #141414;
         // background-color: #1f1d1d;
-        background: linear-gradient(45deg, rgba(94,17,17,1) 30%, rgba(85,21,21,1) 50%, rgba(94,17,17,1) 70%);
-       
         display: flex;
         justify-content: center;
         height: 3.5rem;
         width: 100%;
+        background: linear-gradient(45deg, rgba(94,17,17,1) 30%, rgba(85,21,21,1) 50%, rgba(94,17,17,1) 70%);
 
         transition: ease-in-out .3s;
     }
@@ -197,11 +200,9 @@
         outline: none;
         width: 100%;
         
-
         :active {
             transform: scale(.9);
         }
-       
     }
 
     &__dropDownIcon {
@@ -212,6 +213,4 @@
         cursor: pointer;
     }
 
-    
-   
 }
