@@ -3,19 +3,12 @@
     height: min-content;
     width: 100%;
    
-
     &:hover {
 
         .banner__dropDownIcon {
             height: 3.2rem;
             width: 3.2rem;
         }
-
-        // .banner__footer {
-        //     // background-color: #1b1b1b;
-        //     // background-color: #220e0e;
-        //     background-color: #6a1d1d;
-        // }
     }
 
     &:active {
@@ -33,14 +26,7 @@
         justify-content: center;
         align-items: center;
         height: 20rem;
-
-        // background-color: #141414;
-        // background-color: #252525;
-        // background-color: #1f1d1d;
         background: linear-gradient(142deg, rgba(22,22,22,1) 0%, rgba(27,27,27,1) 80%);
-        
-       
-        
         color: #dbdbdb;
         letter-spacing: .3rem;
        
@@ -49,21 +35,17 @@
         &:hover {
 
             .banner__heading {
-                // font-size: 7.3rem;
-                // font-size: 5.1rem;
+
                 font-size: 6.6rem;
-                font-weight: 500;
-                
+                font-weight: 500;    
             }
+
             .banner__subHeading {
-                // font-size: 2.30rem;
-                // font-size: 1.9rem;
                     font-size: 2.1rem;
             }
 
             .banner__heading, .banner__subHeading {
                 color: #f4f4f4;
-                // transition: all ease-in-out 5s;    
             }
         }
 
@@ -80,20 +62,12 @@
 
                 font-size: 1.9rem;
             }
-
-        }
-        
+        }    
     }
 
     &__heading {
 
-        // color:var(--color-light-primary);
-        // letter-spacing: var(--letter-space-header);
-        // font-size: var(--heading-secondary-2);
-        // text-transform: uppercase;
-
         font-size: 6.5rem;
-        // color:var(--color-light-primary);
         text-transform: uppercase;
         font-weight: 400;
         transition: all ease-in-out .19s;
@@ -103,7 +77,6 @@
        
         margin-top: .7rem;
         font-weight: 300;
-        // font-size: 1.8rem;
         font-size: 2rem;
         letter-spacing: 0.2rem;
         text-transform: uppercase;
@@ -164,9 +137,9 @@
 
     &__drop-text {
 
+        width: 60%;
         letter-spacing: var(--letter-space-text-2);
         line-height: var(--line-height-primary);
-        width: 60%;
     }
 
     &__drop-infoSecondary {
@@ -176,14 +149,10 @@
         justify-content: center;
         width: 50%;
         margin-bottom: 10rem;
-
     }
 
     &__footer {
-        // background-color:#171717;
-        // background-color: #1a1a1a;
-        // background-color: #141414;
-        // background-color: #1f1d1d;
+      
         display: flex;
         justify-content: center;
         height: 3.5rem;
@@ -214,3 +183,51 @@
     }
 
 }
+
+@media only screen and (max-width: 28.125em) {
+
+    .banner {
+
+        &__header {
+    
+            &:hover {
+    
+                .banner__heading {
+                
+                    // font-size: 6.2rem;
+                    font-size: 10.5vw;
+                }
+                .banner__subHeading {
+                   
+                        // font-size: 2.4rem;
+                        font-size: 3.3vw;
+                }
+            }
+    
+    
+            &:active {
+    
+                .banner__heading {
+        
+                    font-size: 10.2vw;
+                }
+    
+                .banner__subHeading { 
+    
+                    font-size: 3.1vw;
+                }
+            }
+        }
+
+        &__heading {
+
+            font-size: 10vw;
+        }
+
+        &__subHeading {
+
+            font-size: 3vw;
+        }
+    }
+}
+
