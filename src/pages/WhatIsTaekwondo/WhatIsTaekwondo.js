@@ -1,6 +1,5 @@
 
 import React from 'react';
-// import KupRanks from '../../components/KupRanks/KupRanks';
 import Landing from '../../components/Landing'
 import InfoCard2 from '../../components/Cards/InfoCard2'
 import DropBanner from '../../components/DropBanner'
@@ -9,6 +8,7 @@ import img13 from '../../assets/img/img13.jpg'
 import img14 from '../../assets/img/img14.jpg'
 import img15 from '../../assets/img/img15.jpg'
 import './WhatIsTaekwondo.scss';
+import '../../components/DropBanner/DropBanner.scss';
 import KupRanks from '../../components/KupRanks';
 import NumberCard from '../../components/Cards/NumberCard';
 
@@ -66,11 +66,12 @@ const WhatIsTaekwondo = () => {
 
             <div className="Taekwondo-main">
 
+                {/*What is Taekwondo*/}
                 <InfoCard2
 
                     ModClass="contentRight" //actual css class style
                     BackgroundImg={img14}
-                    backgroundPosX="20%"
+                    imgPos="left" //css class style
                     title1="What Is"
                     title2="Tae"
                     title3="Kwon"
@@ -87,8 +88,8 @@ const WhatIsTaekwondo = () => {
 
                     bannerTitle="Benefits Of"
                     bannerSubTitle="Taekwondo"
-                    contentTitle="Taekwondo"
-                    contentSubtitle="Improves balance, flexibility, stamina, strength and posture."
+                    textAlign="left" //css class style (drop-info)
+                    contentTitle="Improves balance, flexibility, stamina, strength and posture."
                     contentText="In addition to the physical health improvements, Taekwondo is also known to benefit mental health through building confidence, improved self-esteem, concentration levels and self-discipline. it is a great way to also release stress in a safe environment. Taekwondo is a fun alternative way to exercise from the standard gym. 
                         you can meet new people and work together and connect through progressing on the life journey"
                 >
@@ -104,11 +105,12 @@ const WhatIsTaekwondo = () => {
 
                 </DropBanner>
 
-
+                {/*Belts and Promotions*/}
                 <InfoCard2
 
                     ModClass="contentLeft" //actual css class style
                     BackgroundImg={img15}
+                    imgPos="center" //css class style
                     title1="Belts and"
                     title2="promotions"
                     contentTitle="Kup Ranks"
@@ -119,23 +121,22 @@ const WhatIsTaekwondo = () => {
                 />
 
                 <DropBanner
+
                     bannerTitle="Kup Rank"
                     bannerSubTitle="Grading"
-
-                    contentTitle="Rank Sequence"
-                    contentSubtitle="New students begin at 10th kup (White belt) and advance down in numbers from."
-                    contentText="kuprank component goes here"
-
+                    textAlign="left" //css class style (drop-info)
+                    contentTitle="New students begin at 10th kup and advance down in numbers seen below."
                 >
                     <KupRanks /> {/*child component of DropBanner */}
 
                 </DropBanner>
 
+                {/*Dan Ranks*/}
                 <InfoCard2
 
                     ModClass="contentRight" //actual css class style
                     BackgroundImg={img13}
-                    backgroundPosX="20%"
+                    imgPos="bottom" //css class style
                     title1="Dan Ranks"
                     contentTitle="Black Belts"
                     contentText1="Dan ranks increase from 1st Dan to the 10th Dan.
@@ -143,18 +144,30 @@ const WhatIsTaekwondo = () => {
                         it is a discipline that enhances our spirit and life through our mind and body."
                 />
 
-                <DropBanner
+                {/* <DropBanner
 
                     bannerTitle="Dan Ranks"
                     bannerSubTitle="Grading"
+                    textAlign="center" //css class style (drop-info)
                     contentTitle="Rank Sequence"
-                    contentSubtitle="Improves balance, flexibility, stamina, strength and posture."
-                    // contentText={<KupRanks />}
-                    contentText="In addition to the physical health improvements, Taekwondo is also known to benefit mental health through building confidence, improved self-esteem, concentration levels and self-discipline. it is a great way to also release stress in a safe environment. Taekwondo is a fun alternative way to exercise from the standard gym. 
-                        you can meet new people and work together and connect through progressing on the life journey"
 
-                />
 
+                // list={ ============== this is a hot mess xD
+                //     <ul>
+                //         <li>1st - 3rd dan are considered to be national instructors.</li>
+                //         <li>4th - 6th dan are considered to be international instructors.</li>
+                //         <li>7th dan are considered to be junior master instructors.</li>
+                //         <li>9th dan are considered to be grand masters.</li>
+                //     </ul>
+                // }
+                >
+                    <ul className="banner__drop-info">
+                        <li>1st - 3rd dan are considered to be national instructors.</li>
+                        <li>4th - 6th dan are considered to be international instructors.</li>
+                        <li>7th dan are considered to be junior master instructors.</li>
+                        <li>9th dan are considered to be grand masters.</li>
+                    </ul>
+                </DropBanner> */}
             </div>
 
         </div >
