@@ -2,6 +2,7 @@
    
     height: min-content;
     width: 100%;
+    overflow: hidden; //overflow for hidden elements in dropdown 
    
     &:hover {
 
@@ -19,7 +20,7 @@
     }
 
 
-    &__header {
+    &__header { //container
 
         display: flex;
         flex-direction: column;
@@ -28,6 +29,7 @@
         height: 20rem;
         background: linear-gradient(142deg, rgba(22,22,22,1) 0%, rgba(27,27,27,1) 80%);
         color: #dbdbdb;
+        text-transform: uppercase;
         letter-spacing: .3rem;
        
         cursor: pointer;
@@ -49,7 +51,6 @@
             }
         }
 
-
         &:active {
 
             .banner__heading {
@@ -68,9 +69,8 @@
     &__heading {
 
         font-size: 6.5rem;
-        text-transform: uppercase;
         font-weight: 400;
-        transition: all ease-in-out .19s;
+        transition: all ease-in-out .19s; 
     }
 
     &__subHeading {
@@ -79,56 +79,49 @@
         font-weight: 300;
         font-size: 2rem;
         letter-spacing: 0.2rem;
-        text-transform: uppercase;
 
         transition: all ease-in .19s;
     }
 
-    &__drop-content {
+    &__drop-content { //container
 
         display: flex;
         flex-direction: column;
         align-items: center;
-        visibility: visible;
         max-height: 0px;
-        text-align: center;
+        padding: 0% 15% 0% 15%;
+        text-transform: uppercase;
 
         transition: max-height ease-in-out .7s,
                     opacity ease-in .6s,
-                    visibility ease-in .6s;
-        
+                    visibility ease-in .6s;   
     }
 
     &__drop-heading {
 
-        font-size: 8rem;
-        color: #5B5B5B;
+        margin-bottom: 2rem;
+        color: #8a8a8a;
+        font-weight: 600;
+        font-size: 2rem;
         text-transform: uppercase;
-        letter-spacing: .3rem;
-        font-weight: 700;
-        padding-top: 10rem;
-    }
-
-    &__drop-subHeading {
-
-        margin-top: 2.5rem;
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 2.3rem;
         letter-spacing: var(--letter-space-text-2);
-        color: var(--color-primary);
     }
 
-
-    &__drop-info { //drop-text container
-
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        width: 70%;
-        margin-top: 1.5rem;
-        text-align: left;
+    &__drop-info { //container for text
+ 
+        width: 80rem;
+        padding: 10% 0 5% 0;
         font-size: 1.6rem;
+        text-transform: lowercase;
+
+        //for text alignment 
+        &--left {
+            text-align: left;
+        }
+
+        &--center {
+            text-align: center;
+        }
 
         :empty { //for empty p tags not used in component
             margin: 0rem; 
@@ -137,21 +130,20 @@
 
     &__drop-text {
 
-        width: 60%;
         letter-spacing: var(--letter-space-text-2);
         line-height: var(--line-height-primary);
     }
 
-    &__drop-infoSecondary {
+    &__drop-infoSecondary { //container
 
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: 50%;
-        margin-bottom: 10rem;
+        width: 80rem;
+        padding-bottom: 8%;
     }
 
-    &__footer {
+    &__footer { //container
       
         display: flex;
         justify-content: center;
@@ -184,6 +176,52 @@
 
 }
 
+@media only screen and (max-width: 64em) {
+    .banner {
+
+        &__drop-info { //container for text
+ 
+            width: 100%;
+        }
+    } 
+}
+
+@media only screen and (max-width: 53.125em) {
+
+    .banner {
+
+        &__drop-infoSecondary { //container
+
+            width: 100%;
+            padding-bottom: 15%;
+           
+        }
+    }
+}
+
+@media only screen and (max-width: 28.125em) {
+
+    .banner {
+
+        &__drop-info { //container for text
+
+            padding: 15% 0 5% 0;
+        }
+
+        &__drop-heading {
+
+            line-height: 2.5rem;
+            font-size: 1.9rem
+        }
+
+        &__drop-text {
+
+            line-height: 2.7rem;
+            font-size: 1.8rem;
+        }
+    }
+}
+
 @media only screen and (max-width: 28.125em) {
 
     .banner {
@@ -193,13 +231,12 @@
             &:hover {
     
                 .banner__heading {
-                
-                    // font-size: 6.2rem;
+
                     font-size: 10.5vw;
                 }
+
                 .banner__subHeading {
-                   
-                        // font-size: 2.4rem;
+
                         font-size: 3.3vw;
                 }
             }
@@ -208,7 +245,7 @@
             &:active {
     
                 .banner__heading {
-        
+
                     font-size: 10.2vw;
                 }
     
@@ -228,6 +265,12 @@
 
             font-size: 3vw;
         }
+
+        &__drop-heading {
+            font-size: 1.8rem;
+        }
     }
 }
+
+
 
