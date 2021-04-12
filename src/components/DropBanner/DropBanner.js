@@ -4,14 +4,8 @@ import sprite from "../../assets/icons/sprite.svg";
 
 const DropBanner = (props) => {
 
+
     const [active, setActive] = useState(false);
-
-
-    //const handleClick = () => {
-    //setActive(!active)
-    // on the active state we want banner__content height to be set to min-content visability: visaible 
-    //on non-active state we want height: 0 and visability:hidden svisibility: hidden;
-
 
     const handleOnclick = () => {
         setActive(!active);
@@ -21,20 +15,16 @@ const DropBanner = (props) => {
         <div className="banner">
             <div className="banner__header" onClick={handleOnclick}>
                 <h1 className="banner__heading">{props.bannerTitle}</h1>
-                <h1 className="banner__subHeading">{props.bannerSubTitle}</h1>
+                <h2 className="banner__subHeading">{props.bannerSubTitle}</h2>
             </div>
 
             <div className="banner__drop-content" style={active ? { maxHeight: "9999px" } : { visibility: "hidden", opacity: "0", transition: "all ease-out .7s" }}>
-                <h1 className="banner__drop-heading">{props.contentTitle}</h1>
-                <h1 className="banner__drop-subHeading">{props.contentSubtitle}</h1>
-
-                <div className="banner__drop-info margin-top-sm">
+                <div className={`banner__drop-info banner__drop-info--${props.textAlign}`}>
+                    <h1 className="banner__drop-heading">{props.contentTitle}</h1>
                     <p className="banner__drop-text margin-bottom-sm">{props.contentText}</p>
                     <p className="banner__drop-text margin-bottom-sm">{props.contentText2}</p>
                 </div>
-
                 <div className="banner__drop-infoSecondary">{props.children}</div>
-
             </div>
 
             <div className="banner__footer">
