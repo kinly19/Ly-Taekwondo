@@ -1,7 +1,7 @@
 ///navbar 
 
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import './Navbar.scss'
 
@@ -65,26 +65,27 @@ const Navbar = () => {
 
             <a href="/" className="navbar__logo">Ly Taekwondo</a>
 
-            <ul className="navbar__item">
-                <li className="navbar__links"><Link to="/" className="navbar__links">Home</Link></li>
-                <li className="navbar__links"><Link to="/gallery" className="navbar__links">Gallery</Link></li>
-                <li className="navbar__links"><Link to="/AboutMe" className="navbar__links">About Me</Link></li>
-                <li className="navbar__links"><Link to="/WhatIsTaekwondo" className="navbar__links">Taekwondo</Link></li>
-                <li className="navbar__links"><Link to="/more" className="navbar__links">More</Link></li>
+            <ul className="navbar__items">
+                <li className="navbar__links"><NavLink exact to="/" className="navbar__links" activeClassName="navbar__links-active">Home</NavLink></li>
+                <li className="navbar__links"><NavLink exact to="/gallery" className="navbar__links" activeClassName="navbar__links-active">Gallery</NavLink></li>
+                <li className="navbar__links"><NavLink exact to="/AboutMe" className="navbar__links" activeClassName="navbar__links-active">About Me</NavLink></li>
+                <li className="navbar__links"><NavLink exact to="/WhatIsTaekwondo" className="navbar__links" activeClassName="navbar__links-active">Taekwondo</NavLink></li>
+                <li className="navbar__links"><NavLink exact to="/more" className="navbar__links" activeClassName="navbar__links-active">More</NavLink></li>
             </ul>
 
+            {/*toggled navbar for mobile sizes*/}
             <nav className="navbar-toggle" style={navToggle ? { height: '5rem', transform: 'translateY(10rem)' } : { visibility: 'hidden', opacity: '0', transform: 'translateY(-5rem)' }} >
 
                 <div className="navbar-toggle__button-container">
                     <button className="navbar-toggle__button-toggle" onClick={onClickToggle} style={toggled ? { color: 'white' } : {}}> Ly Taekwondo</button>
                 </div>
 
-                <ul className="navbar-toggle__toggled-item" style={toggled ? { visibility: 'visible', opacity: '1', height: '30rem' } : {}} >
-                    <li className="navbar__links"><Link to="/" className="navbar__links navbar__links--toggled">Home</Link></li>
-                    <li className="navbar__links"><Link to="/gallery" className="navbar__links">Gallery</Link></li>
-                    <li className="navbar__links"><Link to="/AboutMe" className="navbar__links">About Me</Link></li>
-                    <li className="navbar__links"><Link to="/WhatIsTaekwondo" className="navbar__links">Taekwondo</Link></li>
-                    <li className="navbar__links"><Link to="/more" className="navbar__links">More</Link></li>
+                <ul className="navbar-toggle__toggled-items" style={toggled ? { visibility: 'visible', opacity: '1', height: '30rem' } : {}} >
+                    <li className="navbar__links"><NavLink exact to="/" className="navbar__links" activeClassName="navbar__links-active">Home</NavLink></li>
+                    <li className="navbar__links"><NavLink exact to="/gallery" className="navbar__links" activeClassName="navbar__links-active">Gallery</NavLink></li>
+                    <li className="navbar__links"><NavLink exact to="/AboutMe" className="navbar__links" activeClassName="navbar__links-active">About Me</NavLink></li>
+                    <li className="navbar__links"><NavLink exact to="/WhatIsTaekwondo" className="navbar__links" activeClassName="navbar__links-active">Taekwondo</NavLink></li>
+                    <li className="navbar__links"><NavLink exact to="/more" className="navbar__links" activeClassName="navbar__links-active">More</NavLink></li>
                 </ul>
 
             </nav>

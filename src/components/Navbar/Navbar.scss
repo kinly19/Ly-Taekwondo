@@ -1,3 +1,5 @@
+
+
 .navbar {
 
     display: flex;
@@ -8,10 +10,18 @@
     width: 100vw;
     z-index: 100000;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.12rem;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
-   
+    letter-spacing: var(--letter-space-text-2);
+    color: #efefef;
+
+    :link,
+    :visited {
+    text-decoration: none;
+    color: #efefef;
+}
+
     &__logo {
 
         display: flex;
@@ -21,12 +31,13 @@
         min-width: 15rem;                            
         height: 7rem;
         padding-left: 3rem; 
-        color:#efefef;
+       
         white-space: nowrap;
         text-decoration: none;
+
     }
 
-    &__item { //Change name to something more relevant
+    &__items { //Change name to something more relevant
 
         display: flex;
         justify-content: flex-end;
@@ -34,34 +45,45 @@
         width: 50%;
         min-width: 50rem;
         height: 4rem;
-        // clip-path: polygon(27% 0, 100% 0%, 100% 100%, 26% 100%);
-        // clip-path: polygon(2% 0, 100% 0%, 100% 100%, 1% 100%);
         background-color: var(--color-primary);
     }
 
     &__links {
 
-        &:link,
-        &:visited {
-            text-decoration: none;
-        }
+        // &:link,
+        // &:visited {
+        //     text-decoration: none;
+        //     color: #efefef;
+        // }
         
         display:flex;
         justify-content: space-evenly;
         height: 100%;
-        flex-basis: 25%;
+        flex-basis: 100%;
         align-items: center;
         white-space: nowrap;
-        color: #efefef;
+        
         list-style-type: none;
         transition: all .1s;
 
         &:hover {
 
             background-color: #b8081c;
-            font-size: 1.20rem;
-            color: white;
+            font-size: 1.2rem;
+    
         }
+
+        &:active {
+            background-color: #a20718;
+            font-size: 1.12rem;
+        }
+    }
+
+    &__links-active {
+        background-color: #a20718;
+        display: flex;
+        flex-basis: 100%;
+        height: 100%;
     }
 }
 
@@ -90,7 +112,7 @@
         outline: none;
     }
 
-    &__toggled-item {
+    &__toggled-items {
 
         visibility: hidden;
         height: 0rem;
@@ -103,6 +125,7 @@
     }
 }
 
+//changing navbar 
 @media only screen and (max-width: 37.5em) {
 
     .navbar {
@@ -122,6 +145,8 @@
                 font-size: 1.7rem;
             }
         }
+
+        
     }
 
     .navbar-toggle {
@@ -130,6 +155,14 @@
         opacity: 1;
         top: -5rem;
         transition: all ease-in-out .12s;
+
+
+        &__links-active {
+            background-color: #a20718;
+            display: flex;
+            flex-basis: 100%;
+            height: 100%;
+        }
     }
 }
 
