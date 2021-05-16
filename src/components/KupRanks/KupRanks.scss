@@ -1,5 +1,6 @@
 
 .kupContainer {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -11,124 +12,184 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
     
-    // height: 30vh;
-    // width: 10vw;
-    height: 30rem;
+    height: min-content;
     width: 20rem;
+    position: relative;
     margin: 2rem 1.5rem 2rem 1.5rem;
     
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
-    background-color: whitesmoke;
+    color: var(--color-light-secondary);
+
     overflow: hidden;
-    transition: ease-in-out .3s;
     cursor: pointer;
-    
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 4.5rem;
+    transition: ease-in-out .3s;
 
-    &:hover {
+    @media (hover : hover) { //any device that uses a mouse will allow these hovers effects
 
-        background-color: rgb(250, 250, 250);
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        transform: scale(1.04);
+            &:hover {
+
+                background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgb(243,243,243) 100%);
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                transform: scale(1.04);    
+            }
+        
+            &:hover &__header, &:hover &__subheader {
+        
+                transform: translateY(-20rem);
+                opacity: 0;
+                transition: all .40s;
+            }
+        
+            &:hover &__stripe {
+        
+                transform: translateY(20rem);
+            }
+        
+            &:hover &__header--backside, &:hover &__subheader--backside, &:hover &__text {
+                
+                    opacity:1;
+                    transform: translateX(0);
+                    color: var(--color-light-secondary);
+                    transition: ease-in-out .35s;
+            }  
+
     }
 
-    
-    &:hover &__header, &:hover &__subheader{
-
-        transform: translateY(-20rem);
-        opacity: 0;
-        transition: all .40s;
+    &--white {
+        background-color: whitesmoke; 
     }
 
+    &--yellow {
+        // background-color: #EEEF20;
+        background: linear-gradient(180deg, #f8f81e 0%, #d8dc29 85%);
+    }
 
-    &:hover &__strip{
-        transform: translateY(20rem);
-        opacity: 0;
+    &--green {
+        // background-color: #3D9D3D; 
+        // background-color: #50976D;
+        background: linear-gradient(180deg, rgb(59, 155, 106) 0%, rgb(20, 70, 41) 85%);
+    }
+    
+    &--blue {
+        // background-color: #2D5A95;
+        background: linear-gradient(180deg, rgba(38,97,165,1) 0%, rgba(19,49,83,1) 85%);
+    }
+
+    &--red {
+        // background-color: #A42424;
+        background: linear-gradient(180deg, rgba(164,36,36,1) 0%, rgba(142,26,26,1) 85%);
+    }
+
+    &--green, &--blue, &--red {
+
+        // color: #e3e1e1da;
+        // color: #fefefe9e;
+        color: #fefefe94;
+
+            .kup-rank__subheader{
+                color: #e3e1e1;
+            }
+    }
+        
+    &__front { //front side of card container
+        
         display: flex;
-        
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 7rem 0rem 7rem 0rem;
     }
-
-        &--white {
-            background-color: whitesmoke;
-        }
-
-        &--yellow {
-            background-color: #EEEF20;
-        }
-
-        &--green {
-            background-color: #3D9D3D;
-            color: whitesmoke;
-            
-        }
-        
-        &--blue {
-            background-color: #2D5A95;
-            color: whitesmoke;
-        }
-
-        &--red {
-            background-color: #A42424;
-            color: #0c0c0c;
-        }
 
 
     &__header {
-     
-        margin-top: 5rem;
-        font-size: 4.6rem;
+    
+        font-size: 5rem;
+        letter-spacing: 0.6rem;
         font-weight: 600;
-        opacity: 1;
-        transition: all .5s;
+
+        &--backside {
+            transform: translateX(20rem);
+        }
+
+        transition: ease-in-out .30s;
     }
 
     &__subheader {
 
-        margin-top: 1.5rem;
-        margin-bottom: 5rem;
-        font-size: 3rem;
-        font-weight: 400;
+        font-size: 4.6rem;
+        font-weight: 300;
+        letter-spacing: .9rem;
         opacity: 1;
+
+        &--backside {
+
+            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 0.15rem;
+            transform: translateX(-20rem);
+            transition: all .35s;
+            opacity: 0;
+        }
+
         transition: all .35s;
     }
 
-    &__strip {
+    &__text {
+
+        padding: 0rem 1.5rem 0rem 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.9rem;
+        letter-spacing: .02rem;
+        text-transform: capitalize;
+        
+        transform: translateY(20rem);
+        opacity: 0;
+        transition: all .3s;
+    }
+
+    &__stripe {
+
+        // position: absolute;
+        // bottom: 0;
     
-        margin-bottom: 2rem;
-        height: 3.2vh;
+        height: 3.5rem;
         width: 100%;
         opacity: 1;
-        
 
             &--none {
-                opacity: 0;
+               background-color: transparent;
             }
 
             &--white {
                 background-color: white; 
-            
             }
 
             &--yellow {
-                // background-color: #F5FB51;
-                background-color: #EEEF20;
+                // background-color: #EEEF20;
+                background-color: #eaea27;
             }
 
             &--green {
-                // background-color: #009700;
-                background-color: #3D9D3D;
+                // background-color: #3D9D3D;
+                
+                // background-color: #3b9b6a;
+               background-color: #24714a;  
             } 
 
             &--blue {
-                // background-color: #125BB9;
-                background-color: #2D5A95;
+                background-color: #235a98;
             } 
 
             &--red {
-                // background-color: #BB2929;
-                background-color: #A42424;
+                background-color: #960b0b;;
+                // background-color:  rgba(142,26,26,1);
             }
 
             &--black {
@@ -136,10 +197,9 @@
             }  
 
             transition: all .6s;
- 
     }
 
-    &__back {
+    &__back { //backside of card container
 
         position: absolute;
         display: flex;
@@ -147,77 +207,61 @@
         justify-content: center;
         align-items: center;
         
-        height: inherit;
-        width: inherit;
     }
 
 }
 
-.back-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: inherit;
-    width: inherit;
-    color: #3a4256;
+@media (hover: none) { //devices with touch only
 
-    &__header {
 
-        font-size: 0rem; // 0n hover font-size 4.5rem
-        transform: translateX(20rem);
-        transition: all .35s;
-        opacity: 0;
-    }
+    .kup-rank {
 
-    &__subheader {
-
-        margin-top: 1.5rem;
-        margin-bottom: 2rem;
-        font-size: 1.4rem;
-        font-weight: 400;
-        transform: translateX(-20rem);
-        transition: all .35s;
-        opacity: 0;
-    }
-
-    &__text {
-
-        padding: 1rem 2rem 1rem 2rem;
-        font-weight: 400;
-        font-size: 1.25rem;
-        line-height: 1.9rem;
-        letter-spacing: .02rem;
-        text-align: center;
-        color: #CC0018;
+        height: 40rem;
+        justify-content: start;
+      
+        &__front { //front side of card container
         
-        transform: translateY(20rem);
-        opacity: 0;
-        transition: all .3s;
+            padding: 4rem 0rem 0rem 0rem;
+        }
+
+        &__back { //backside of card container
+
+            position: unset; 
+        }
+
+        &__header {
+    
+            &--backside {
+                transform: translateX(0);
+            }
+        }
+    
+        &__subheader {
+            
+            &--backside {
+
+                transform: translateX(0rem);
+                opacity: 1; 
+            }
+        }
+    
+        &__text {
+    
+            transform: translateY(0rem);
+            opacity: 1;
+        }
+
+        &__stripe {
+
+            position: absolute;
+            bottom: 0;
+        }
     }
-
-
-    &:hover &__header{
-        opacity:1;
-        transform: translateX(0);
-        font-size: 4.5rem;
-        
-    }
-
-    &:hover &__subheader {
-        opacity:1;
-        transform: translateX(0);
-        font-size: 1.4rem;
-    }
-
-    &:hover &__text {
-        opacity:1;
-        transform: translateY(0);
-        transition: all .50s;
-    }
-
-  
 }
+
+
+
+
 
 
  
