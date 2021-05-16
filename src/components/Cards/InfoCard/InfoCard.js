@@ -27,6 +27,10 @@ const InfoCard = (props) => {
         marginBottom: `${props.paragraphMarginB}`
     }
 
+    const contentAlign = {
+        alignItems: `${props.contentAlign}`
+    }
+
     const iconStyle = {
         display: `${props.iconDisplay}`
     }
@@ -37,10 +41,10 @@ const InfoCard = (props) => {
 
             <div className="infoCard__img" style={background}> </div>
 
-            <div className="infoCard__content">
+            <div className="infoCard__content" style={contentAlign}>
 
                 <h1 className={`infoCard__header infoCard__header--${props.mainHeaderClass}`} style={headerStyle}>{props.infoCardTitle}</h1>
-                <h1 className={`infoCard__header infoCard__header--${props.subHeaderClass} margin-bottom-xs`} style={subHeaderStyle}> {props.infoCardSubtitle}</h1>
+                <h2 className={`infoCard__header infoCard__header--${props.subHeaderClass} margin-bottom-xs`} style={subHeaderStyle}> {props.infoCardSubtitle}</h2>
                 <p className="infoCard__paragraph infoCard__paragraph margin-bottom-xs" style={paragraphStyle}>{props.infoCardText}</p>
                 <p className="infoCard__paragraph infoCard__paragraph margin-bottom-xs" style={paragraphStyle}>{props.infoCardText2}</p>
                 <p className="infoCard__paragraph infoCard__paragraph margin-bottom-xs" style={paragraphStyle}>{props.infoCardText3}</p>
