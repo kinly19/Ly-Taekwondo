@@ -1,8 +1,5 @@
 import React from 'react';
-
 import './KupRanks.scss';
-
-
 
 
 const KupRanks = (props) => {
@@ -21,7 +18,7 @@ const KupRanks = (props) => {
             kupRank: "9TH",
             beltColor: "white",
             beltStripe: "yellow",
-            title: "White Belt Yellow Stripe",
+            title: "The Yellow Stripe",
             details: "Each stripe represents an intermediate step towards the next rank."
 
         },
@@ -39,7 +36,7 @@ const KupRanks = (props) => {
             kupRank: "7TH",
             beltColor: "yellow",
             beltStripe: "green",
-            title: "Yellow Belt Green Stripe",
+            title: "The Green Stripe",
             details: "Each stripe represents an intermediate step towards the next rank."
 
         },
@@ -57,7 +54,7 @@ const KupRanks = (props) => {
             kupRank: "5TH",
             beltColor: "green",
             beltStripe: "blue",
-            title: "Green Belt Blue Stripe",
+            title: "The Blue Stripe",
             details: "Each stripe represents an intermediate step towards the next rank."
 
         },
@@ -75,7 +72,7 @@ const KupRanks = (props) => {
             kupRank: "3RD",
             beltColor: "blue",
             beltStripe: "red",
-            title: "Blue Belt Red Stripe",
+            title: "The Red Stripe",
             details: "Each stripe represents an intermediate step towards the next rank."
 
         },
@@ -93,37 +90,37 @@ const KupRanks = (props) => {
             kupRank: "1ST",
             beltColor: "red",
             beltStripe: "black",
-            title: "Red Belt Black Stripe",
+            title: "The Black Stripe",
             details: "Each stripe represents an intermediate step towards the next rank."
 
         },
 
-
     ]
+
     return (
 
-        <div className="kupContainer">
+        <div className="kupContainer"> {/* kuprank card container*/}
             {Ranks.map((item, index) => (
+
                 <div className={`kup-rank kup-rank--${item.beltColor}`} key={index}>
-                    <h1 className="kup-rank__header"> {item.kupRank}</h1>
-                    <h2 className="kup-rank__subheader">Kup</h2>
-                    <div className={`kup-rank__strip kup-rank__strip--${item.beltStripe}`}></div>
+
+                    <div className="kup-rank__front">
+                        <h1 className="kup-rank__header"> {item.kupRank}</h1>
+                        <h2 className="kup-rank__subheader">Kup</h2>
+                    </div>
 
                     <div className="kup-rank__back">
-                        <div className="back-content">
-                            <h1 className="back-content__header">AKA</h1>
-                            <h2 className="back-content__subheader">{item.title}</h2>
-                            <p className="back-content__text">{item.details}</p>
-                        </div>
-
+                        <h1 className="kup-rank__header kup-rank__header--backside">AKA</h1>
+                        <h2 className="kup-rank__subheader kup-rank__subheader--backside">{item.title}</h2>
+                        <p className="kup-rank__text">{item.details}</p>
                     </div>
+
+                    <div className={`kup-rank__stripe kup-rank__stripe--${item.beltStripe}`}></div>
                 </div>
             ))}
+
         </div>
-
-
     )
 }
-
 
 export default KupRanks
