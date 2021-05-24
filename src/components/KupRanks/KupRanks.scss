@@ -17,6 +17,7 @@
     width: 20rem;
     position: relative;
     margin: 2rem 1.5rem 2rem 1.5rem;
+    padding: 9rem 0rem 9rem 0rem;
     
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
@@ -29,7 +30,7 @@
     line-height: 4.5rem;
     transition: ease-in-out .3s;
 
-    @media (hover : hover) { //any device that uses a mouse will allow these hovers effects
+    @media (hover : hover) { //any device that uses a mouse will allow these hover effects
 
             &:hover {
 
@@ -102,9 +103,8 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 7rem 0rem 7rem 0rem;
+        // padding: 7rem 0rem 7rem 0rem;
     }
-
 
     &__header {
     
@@ -128,7 +128,7 @@
 
         &--backside {
 
-            margin-bottom: 2rem;
+            margin-bottom: 0.5rem;
             font-size: 1.4rem;
             font-weight: 400;
             letter-spacing: 0.15rem;
@@ -156,8 +156,8 @@
 
     &__stripe {
 
-        // position: absolute;
-        // bottom: 0;
+        position: absolute;
+        bottom: 0;
     
         height: 3.5rem;
         width: 100%;
@@ -205,10 +205,55 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        
+        align-items: center; 
     }
+}
 
+@media (hover: hover) { 
+
+    @media only screen and (max-width: 37.5em) {
+
+        .kup-rank {
+    
+            height: min-content;
+            width: 35rem;
+            line-height: 7.5rem;
+            padding: 15rem 0 15rem 0;
+    
+            &__header {
+            
+                font-size: 7.2rem;
+
+                &--backside {
+                    transform: translateX(30rem);
+                    line-height: 3.5rem;
+                }
+            }
+        
+            &__subheader {
+        
+                font-size: 6.5rem;
+        
+                &--backside {
+    
+                    transform: translateX(-40rem);
+                    font-size: 2rem; 
+                }
+            }
+        
+            &__text {
+        
+                padding: 0rem 4.5rem 0rem 4.5rem;
+                font-size: 1.9rem;
+                line-height: 2.7rem;         
+            }
+        
+            &__stripe {
+    
+                height: 4.5rem;
+            }
+        }
+    }
 }
 
 @media (hover: none) { //devices with touch only
@@ -217,13 +262,9 @@
     .kup-rank {
 
         height: 40rem;
+        padding: 5rem 0rem 0rem 0rem;
         justify-content: start;
-      
-        &__front { //front side of card container
-        
-            padding: 4rem 0rem 0rem 0rem;
-        }
-
+    
         &__back { //backside of card container
 
             position: unset; 
@@ -250,14 +291,57 @@
             transform: translateY(0rem);
             opacity: 1;
         }
+    }
 
-        &__stripe {
+    @media only screen and (max-width: 32.5em) {
 
-            position: absolute;
-            bottom: 0;
+        .kup-rank {
+    
+            height: min-content;
+            width: 80%;
+            line-height: 6rem;
+            // padding: 7rem 7% 10rem 7%;
+            padding: 7rem 2.5rem 10rem 2.5rem;
+    
+            &__header {
+    
+                font-size: 7rem;
+            }
+    
+            &__subheader {
+    
+                font-size: 6.2rem;
+    
+                &--backside {
+    
+                    font-size: 2rem;
+                    line-height: 2.7rem;
+                    margin-top: 1.5rem;
+                    margin-bottom: 2.5rem;
+                }
+            }
+    
+            &__text {
+                
+                font-size: 1.9rem;
+                line-height: 2.7rem;
+                padding: 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 21.875em) {
+
+        .kup-rank {
+
+            width:100%;
+            padding: 7rem 7% 10rem 7%;
+
         }
     }
 }
+
+
 
 
 
