@@ -86,10 +86,16 @@ html {
 }
 
 body {
+
     min-height: 100vh;
     height: 100%;
     position: relative;
     padding-bottom: 27rem;
+
+    //for footer on smaller screen sizes
+    @media only screen and (max-width: 53.125em ) {
+        padding-bottom: 40rem    
+    }
 }
 
 
