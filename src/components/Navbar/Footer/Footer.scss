@@ -1,0 +1,106 @@
+.footer {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 25%;
+    position: absolute;
+    bottom: 0;
+
+    height: 27rem;
+    width: 100vw;
+    padding: 5rem;
+    background: linear-gradient(180deg, rgba(23,22,22,1) 0%, rgba(24,23,23,1) 100%);
+
+
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #efefef;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-space-text-2);
+    
+    :link,
+    :visited {
+
+    text-decoration: none;
+    color: #efefef;
+
+    }
+    
+    &__items {
+        
+        display: flex;
+        justify-content: center;
+        width: 25%;
+    }
+
+    &__link {
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5rem;
+        flex-basis: 100%;
+        text-align: center;
+        list-style-type: none;
+
+        &:hover {
+            transform: scale(1.1);
+            
+        }
+ 
+        &:active {
+             transform: scale(1);
+        }
+
+        transition: ease-in-out .25s;
+    }
+
+    &__icons {
+
+        display: flex;
+        align-items: center;
+        height: 100%; 
+    }
+
+    &__icon-link {
+
+        fill: #c6c4c4;
+        height: 3.5rem;
+        width: 3.5rem;
+        margin: 1rem;
+        fill: rgb(207, 207, 207);
+
+        &--ytube {
+
+            height: 4.5rem;
+            width: 4.5rem;
+        }
+
+       &:hover {
+           transform: scale(1.1);
+       }
+
+       &:active {
+            transform: scale(1);
+       }
+ 
+       transition: ease-in-out .20s;
+    }
+
+    &__copyright { 
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+    
+    }
+
+    &__text { 
+        
+    line-height: var(--line-height-primary);
+    }
+}
