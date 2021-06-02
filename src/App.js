@@ -6,6 +6,8 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop';
 import AboutMe from './pages/AboutMe';
 import WhatIsTaekwondo from './pages/WhatIsTaekwondo/WhatIsTaekwondo';
+import Footer from './components/Navbar/Footer';
+import './App.scss'
 
 
 
@@ -21,6 +23,7 @@ function App() {
           <Route exact path='/AboutMe' component={AboutMe} />
           <Route exact path='/WhatIsTaekwondo' component={WhatIsTaekwondo} />
         </Switch>
+        <Footer />
       </div>
     </BrowserRouter>
 
