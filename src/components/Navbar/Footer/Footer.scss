@@ -101,6 +101,37 @@
 
     &__text { 
         
-    line-height: var(--line-height-primary);
+        line-height: var(--line-height-primary);
+    }
+}
+
+@media only screen and (max-width: 53.125em) {
+    
+    .footer {
+
+        height: 40rem;
+              
+        &__items {
+            flex-direction: column;
+        }
+
+        &__link {
+
+            font-size: 1.5rem;
+
+           &:not(:last-child){
+               padding-bottom: 2rem;
+           }
+        }
+
+        &__text { 
+
+            font-size: 1.2rem;
+            
+            &:not(:last-child) {
+                padding-bottom: 1rem;
+            }
+        }
+        
     }
 }
