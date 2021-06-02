@@ -58,6 +58,7 @@
 
 html {
 
+
     box-sizing: border-box;
     font-size: 62.5%; 
      /* 1 rem = 10px when default font-size is 16px */
@@ -82,6 +83,13 @@ html {
         font-size: 45%;
     }
      
+}
+
+body {
+    min-height: 100vh;
+    height: 100%;
+    position: relative;
+    padding-bottom: 27rem;
 }
 
 
