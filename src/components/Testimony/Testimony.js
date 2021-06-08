@@ -5,7 +5,6 @@ import './Testimony.scss';
 
 const Testimony = (props) => {
 
-
     const testimonials = [ //state which will hold our data
         {
             client: "Ahren - Participant of Ly Taekwondo Workshop",
@@ -23,34 +22,70 @@ const Testimony = (props) => {
         }
     ]
 
-    const [current, setCurrent] = useState(testimonials[2]); //telling react what part of the state(data from the state) we want to use
+    const [current, setCurrent] = useState(testimonials[2]); //telling react what part of the state(data from the testimony) we want to use
 
-    const [active, setActive] = useState(2); //helps us keep track of span color
+    const [active, setActive] = useState(2); //helps us keep track of span color on active
 
+    const [touchStart, setTouchStart] = useState(0); //position for touch
 
-
-
+    const [touchEnd, setTouchEnd] = useState(0); //position for touchend
 
     const handleSetClick = (index) => {
 
-        setCurrent(testimonials[index]) //setCurrent too
-        setActive(index)
+        setCurrent(testimonials[index]) //setCurrent too onclick of span
+        setActive(index) //set span color on active
     }
 
+    const handleTouchStart = (e) => {
+
+        setTouchStart(e.targetTouches[0].clientX);
+        // console.log(e.targetTouches[0].clientX);
+    }
+
+    const handleTouchMove = (e) => {
+
+        setTouchEnd(e.targetTouches[0].clientX);
+        // console.log(e.targetTouches[0].clientX);
+    }
+
+    const handleTouchEnd = () => {
+
+        if (touchStart - touchEnd > 150) { //clientX position on touchstart - clientX position on touchEnd
+
+            setActive(active - 1) //change active span to match testimony array index
+            setCurrent(testimonials[active - 1]) //using the value of active for our testimony array index
+            // console.log(active)
+            if (active === 0) {
+
+                setActive(2)
+                setCurrent(testimonials[2])
+                console.log(active)
+            }
+            // console.log("move left")
+        } else if (touchStart - touchEnd < -150) {
+
+            setActive(active + 1)
+            setCurrent(testimonials[active + 1])
+
+            // console.log(active)
+            if (active === testimonials.length - 1) {
+                setActive(0)
+                setCurrent(testimonials[0])
+            }
+            // console.log("move right")
+        }
+    }
 
     const background = {
         backgroundImage: `url(${props.backgroundImg})`
     }
 
-
-
-
     return (
 
-        <div className="testimony">
+        <div className="testimony" >
             <div className="testimony__img" style={background}></div>
 
-            <div className="testimony__content">
+            <div className="testimony__content" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
 
                 <div className="testimony__content-container">
                     <h1 className="testimony__header margin-bottom-xs">What Others Had To Say</h1>
