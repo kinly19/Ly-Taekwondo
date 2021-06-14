@@ -158,6 +158,12 @@
             margin-bottom: 2rem;
       
         }
+
+        &__p-text {
+            font-size: 2.2rem;
+            line-height: 3.3rem;
+        }
+
     }
 }
 
@@ -189,8 +195,8 @@
         &__p-text {
 
             padding-right: 0.5rem;
-            font-size: 1.8rem;
-            line-height: 2.7rem;
+            // font-size: 1.8rem;
+            // line-height: 2.7rem;
         }
     }
 }

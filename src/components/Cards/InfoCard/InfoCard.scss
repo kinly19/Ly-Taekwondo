@@ -27,7 +27,6 @@
         width: 50vw;
         padding: 5rem 5rem 5rem 12rem;
         text-align: center;
-       
     }
 
     &__header {
@@ -85,8 +84,7 @@
         text-align: center;
         letter-spacing: var(--letter-space-text-2);
         line-height: var(--line-height-primary);
-        color: var(--color-light-secondary);
-        
+        color: var(--color-light-secondary); 
     }
 
     &__icon-container {
@@ -126,7 +124,6 @@
             &--secondary-red {
                 
                 font-size: 2.7vw;
-               
                 text-align: center;
             }    
         }
@@ -139,9 +136,9 @@
 
         &__header {
 
-            &--main-red {
-                font-size: 6.9;
-            }
+            // &--main-red {
+            //     font-size: ;
+            // }
         }
     }
 }
@@ -155,8 +152,7 @@
             position: relative;
             clip-path: none;
             width: 100%;
-            background-position: center;
-            
+            background-position: center; 
         }
 
         &__content {
@@ -166,7 +162,6 @@
             left:0; //so content can sit ontop of background image
             background: linear-gradient(90deg, #f0f0f0c4 0%, #f7f6f6f7 35%, #ece8e8e0 100%);
             padding: 0 7rem 0 7rem;
-        
         }
 
         &__header {
@@ -184,7 +179,6 @@
                 font-size: 2.5vw;
                 margin-top: 2rem;
             }
-            
         }
 
         &__paragraph {
@@ -197,7 +191,6 @@
 
            height: 3vw;
         }
-        
     }
 }
 
@@ -271,7 +264,7 @@
 
     .infoCard {
         
-        height: min-content;
+        height: 100vh;
 
         &__img {
 
@@ -312,8 +305,8 @@
 
         &__paragraph {
 
-            font-size: 1.9rem;
-            line-height: 2.7rem;
+            font-size: 2.2rem;
+            line-height: 3rem;
 
             &--2 {
                 padding: unset;
@@ -339,8 +332,8 @@
         &__paragraph {
 
             padding-bottom: 1.5rem;
-            font-size: 1.8rem;
-            line-height: 2.7rem;
+            // font-size: 1.8rem;
+            // line-height: 2.7rem;
         } 
     }
 }
