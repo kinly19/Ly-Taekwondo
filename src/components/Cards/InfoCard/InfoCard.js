@@ -61,7 +61,6 @@ const InfoCard = (props) => {
 
                 <div className="infoCard__icon-container" style={iconStyle}>
                     <a href="https://www.instagram.com/ly_taekwondo"><img className="infoCard__icons infoCard__icons--instag_icon" src={instagram} alt="instagram icon" /></a>
-                    <a href="https://www.facebook.com"> <img className="infoCard__icons infoCard__icons--facebook_icon" src={facebook} alt="sacebook icon" /></a>
                     <a href="https://www.youtube.com/channel/UC4towYpMTj6oK0xVYpMVmvA?"> <img className="infoCard__icons infoCard__icons--youtube_icon" src={youtube2} alt="youtube icon"></img></a>
                 </div>
             </div >
